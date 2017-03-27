@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--link to a-frame cdn-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.5.0/aframe.js"></script>
+</head>
+<body>
+    <a-scene>
+        <!--camera-->
+        <!--<a-entity camera="userHeight: 1.6" look-controls position="0 0 -30"></a-entity>-->
+
+        
+
+        <!--base entrance hallway-->
+            <!--floor-->
+        <a-box position="0 -1 -10" color="#BABDCE" opacity="0.8" depth="10" height=".01" width="10"></a-box>
+            <!--ceiling-->
+        <a-box position="0 9 -10" color="#1F2130" opacity="0.8" depth="10" height=".01" width="10"></a-box>
+            <!--walls-->
+        <a-box position="5 4 -10" color="#6173F4" opacity="0.8" depth="10" height="10" width=".01"></a-box>
+        <a-box position="-5 4 -10" color="#6173F4" opacity="0.8" depth="10" height="10" width=".01"></a-box>
+        <!--elevator wall-->
+            <!--l/r of elevator door-->
+        <a-box position="-3.5 4 -15" color="#6173F4" opacity="0.8" depth=".01" height="10" width="3"></a-box>
+        <a-box position="3.5 4 -15" color="#6173F4" opacity="0.8" depth=".01" height="10" width="3"></a-box>
+            <!--above elevator door-->
+        <a-box position="0 7.5 -15" color="#6173F4" opacity="0.8" depth=".01" height="4" width="4"></a-box>
+
+
+        <!--elevator-->
+            <!--floor-->
+        <a-box position="0 -1 -17.25" color="#BABDCE" opacity="0.8" depth="4.5" height=".01" width="10"></a-box>
+            <!--ceiling-->
+        <a-box position="0 5.5 -17.25" color="#1F2130" opacity="0.8" depth="4.5" height=".01" width="10"></a-box>
+            <!--walls-->
+        <a-box position="3.5 2.5 -17.25" color="#6173F4" opacity="0.8" depth="4.5" height="7" width=".01"></a-box>
+        <a-box position="-3.5 2.5 -17.25" color="#6173F4" opacity="0.8" depth="4.5" height="7" width=".01"></a-box>
+        <!--back elevator wall-->
+            <!--l/r of elevator door-->
+        <a-box position="-3.5 4 -19.5" color="#6173F4" opacity="0.8" depth=".01" height="10" width="3"></a-box>
+        <a-box position="3.5 4 -19.5" color="#6173F4" opacity="0.8" depth=".01" height="10" width="3"></a-box>
+            <!--above elevator door-->
+        <a-box position="0 6.5 -19.5" color="#6173F4" opacity="0.8" depth=".01" height="4" width="4"></a-box>
+
+        <!--main gallery-->
+            <!--floor-->
+        <a-box position="0 -1 -32" color="#BABDCE" opacity="0.8" depth="25" height=".01" width="30"></a-box>
+            <!--ceiling-->
+        <a-box position="0 11 -32" color="#1F2130" opacity="0.8" depth="25" height=".01" width="30"></a-box>
+            <!--l/r walls-->
+        <a-box position="-15 5 -32" color="#6173F4" opacity="0.8" depth="25" height="12" width=".01"></a-box>
+        <a-box position="15 5 -32" color="#6173F4" opacity="0.8" depth="25" height="12" width=".01"></a-box>
+            <!--back wall-->
+        <a-box position="0 5 -44.5" color="#6173F4" opacity="0.8" depth=".01" height="12" width="30"></a-box>
+
+
+        <a-sky color="#ECECEC"></a-sky>
+
+
+        <!--tie fighter for reasons-->
+        <a-assets>
+            <a-asset-item id="tree" src="./images/star-wars-vader-tie-fighter.dae"></a-asset-item>
+        </a-assets>
+        <a-entity collada-model="#tree" position="0 2 -30"></a-entity>
+        <!--<a-entity collada-model="url(./images/star-wars-vader-tie-fighter.dae)"></a-entity>-->
+
+    </a-scene>
+</body>
+</html>
