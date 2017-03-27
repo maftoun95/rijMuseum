@@ -48,26 +48,45 @@
 
         <!--main gallery-->
             <!--floor-->
-        <a-box position="0 -1 -32" color="#BABDCE" opacity="0.8" depth="25" height=".01" width="30"></a-box>
+        <a-box position="0 -1 -39.5" color="#BABDCE" opacity="0.8" depth="40" height=".01" width="35"></a-box>
             <!--ceiling-->
-        <a-box position="0 11 -32" color="#1F2130" opacity="0.8" depth="25" height=".01" width="30"></a-box>
+        <a-box position="0 11 -39.5" color="#1F2130" opacity="0.8" depth="40" height=".01" width="35"></a-box>
             <!--l/r walls-->
-        <a-box position="-15 5 -32" color="#6173F4" opacity="0.8" depth="25" height="12" width=".01"></a-box>
-        <a-box position="15 5 -32" color="#6173F4" opacity="0.8" depth="25" height="12" width=".01"></a-box>
+        <a-box position="-17.5 5 -39.5" color="#6173F4" opacity="0.8" depth="40" height="12" width=".01"></a-box>
+        <a-box position="17.5 5 -39.5" color="#6173F4" opacity="0.8" depth="40" height="12" width=".01"></a-box>
             <!--back wall-->
-        <a-box position="0 5 -44.5" color="#6173F4" opacity="0.8" depth=".01" height="12" width="30"></a-box>
+        <a-box position="0 5 -59.5" color="#6173F4" opacity="0.8" depth=".01" height="12" width="35"></a-box>
+            <!--separators-->
+                <!--left-->
+        <a-box position="-11.5 5 -47" color="#6173F4" opacity="0.8" depth=".35" height="12" width="12"></a-box>
+                <!--right-->
+        <a-box position="11.5 5 -47" color="#6173F4" opacity="0.8" depth=".35" height="12" width="12"></a-box>
+                <!--center-->
+        <a-box position="0 5 -33" color="#6173F4" opacity="0.8" depth=".35" height="12" width="12"></a-box>
+        
 
 
-        <a-sky color="#ECECEC"></a-sky>
+        <!--near wall-->
+            <!--l/r-->
+        <a-box position="-11 5 -19.5" color="#6173F4" opacity="0.8" depth=".01" height="12" width="13"></a-box>
+        <a-box position="11 5 -19.5" color="#6173F4" opacity="0.8" depth=".01" height="12" width="13"></a-box>
+            <!--top-->
+        <a-box position="0 8 -19.5" color="#6173F4" opacity="0.8" depth=".01" height="6" width="10"></a-box>
 
 
-        <!--tie fighter for reasons-->
+
+
+
+        <!--model assets-->
+            <!--tie fighter for reasons-->
         <a-assets>
             <a-asset-item id="tree" src="./images/star-wars-vader-tie-fighter.dae"></a-asset-item>
         </a-assets>
-        <a-entity collada-model="#tree" position="0 2 -30"></a-entity>
-        <!--<a-entity collada-model="url(./images/star-wars-vader-tie-fighter.dae)"></a-entity>-->
+        <a-entity collada-model="#tree" position="0 1.6 -30"></a-entity>
 
+
+            <!--environment-->
+        <a-sky color="#ECECEC"></a-sky>
     </a-scene>
 </body>
 </html>
