@@ -2,3 +2,14 @@ imgData.artObject.dimensions[0].value = height in cm
 imgData.artObject.dimensions[2].value = weight in cm
 imgData.artObject.webimage.url);
 On Load use a function to populate the canvas variables.
+
+API Syntax
+
+
+
+
+
+Rembrant's artist page
+https://www.rijksmuseum.nl/en/rijksstudio/artists/rembrandt-harmensz-van-rijn
+API call for said page:
+https://www.rijksmuseum.nl/api/pages/en/rijksstudio/artists/rembrandt-harmensz-van-rijn?key=xvBxNCX5&format=json

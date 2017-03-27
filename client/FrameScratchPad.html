@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app='rijMuse'>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,8 @@
     <title>Canvas Test Page</title>
     <!--link to a-frame cdn-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.5.0/aframe.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js"></script>
 
 </head>
 <body>
@@ -17,7 +19,7 @@
         <a-box position="0 -1 -10" color="#BABDCE" opacity="0.8" depth="10" height=".01" width="10"></a-box>
         <a-box position="0 -1 -5" color="#BABDCE" opacity="0.8" depth="10" height=".01" width="10"></a-box>
         <!--Canvas for images-->
-        <a-box id="theCanvas" position="0 1.5 -3" depth="0.1" height="" width="" src="http://lh6.ggpht.com/ZYWwML8mVFonXzbmg2rQBulNuCSr3rAaf5ppNcUc2Id8qXqudDL1NSYxaqjEXyDLSbeNFzOHRu0H7rbIws0Js4d7s_M=s0">
+        <a-box id="theCanvas" position="0 1.5 -3" depth="0.1" height="" width="" src="">
             <!--Content Location: https://www.rijksmuseum.nl/api/en/collection/sk-c-5?key=xvBxNCX5&format=json-->
         </a-box>
         
