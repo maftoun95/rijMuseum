@@ -1,0 +1,4 @@
+imgData.artObject.dimensions[0].value = height in cm
+imgData.artObject.dimensions[2].value = weight in cm
+imgData.artObject.webimage.url);
+On Load use a function to populate the canvas variables.
