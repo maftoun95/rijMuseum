@@ -1,0 +1,1 @@
+var rijMuse = angular.module('rijMuse', []);
