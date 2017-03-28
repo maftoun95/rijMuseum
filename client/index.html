@@ -15,7 +15,10 @@
         <!--camera-->
         <!--<a-entity camera="userHeight: 1.6" look-controls position="0 0 -30"></a-entity>-->
 
-        
+        <!--load partials-->
+        <div ng-view>
+            
+        </div>
 
         <!--base entrance hallway-->
             <!--floor-->
@@ -61,39 +64,59 @@
                 <!--LOW RIGHT-->
         <a-box position="2.93 1.55 -19.2" color="#7C0006" opacity="0.8" depth=".11" height=".15" width=".15"></a-box>
         
-        
+        <!--texture asset-->
+        <a-assets>
+            <img id="floorTexture" src="./images/blueMarble.jpg">
+            <img id="wallTexture" src="./images/wall1.jpg">
+        </a-assets>
 
         <!--main gallery-->
             <!--floor-->
-        <a-box position="0 -1 -39.5" color="#BABDCE" opacity="0.8" depth="40" height=".01" width="35"></a-box>
+        <a-box material="src:#floorTexture; repeat: 5 5" position="0 -1 -39.5" color="#BABDCE" opacity="0.8" depth="40" height=".01" width="35"></a-box>
             <!--ceiling-->
         <a-box position="0 11 -39.5" color="#1F2130" opacity="0.8" depth="40" height=".01" width="35"></a-box>
             <!--l/r walls-->
-        <a-box position="-17.5 5 -39.5" color="#6173F4" opacity="0.8" depth="40" height="12" width=".01"></a-box>
-        <a-box position="17.5 5 -39.5" color="#6173F4" opacity="0.8" depth="40" height="12" width=".01"></a-box>
+        <a-box material="src:#wallTexture; repeat: 5 5; side: front" position="-17.5 5 -39.5"  opacity="1" depth="40" height="12" width=".01"></a-box>
+        <a-box material="src:#wallTexture; repeat: 5 5; side: back" color="#C6C5CA" position="17.5 5 -39.5"  opacity="1" depth="40" height="12" width=".01"></a-box>
             <!--back wall-->
-        <a-box position="0 5 -59.5" color="#6173F4" opacity="0.8" depth=".01" height="12" width="35"></a-box>
+        <a-box position="0 5 -59.5" material="src:#wallTexture; repeat: 5 5" opacity="1" depth=".01" height="12" width="35"></a-box>
             <!--separators-->
                 <!--left-->
-        <a-box position="-11.5 5 -47" color="#6173F4" opacity="0.8" depth=".35" height="12" width="12"></a-box>
+        <a-box position="-11.5 5 -47" opacity="1" depth=".35" height="12" width="12" material="src:#wallTexture; repeat: 5 5"></a-box>
                 <!--right-->
-        <a-box position="11.5 5 -47" color="#6173F4" opacity="0.8" depth=".35" height="12" width="12"></a-box>
+        <a-box position="11.5 5 -47" color="#6173F4" opacity="1" depth=".35" height="12" width="12"></a-box>
                 <!--center-->
-        <a-box position="0 5 -33" color="#6173F4" opacity="0.8" depth=".35" height="12" width="12"></a-box>
+        <a-box position="0 5 -33" color="#6173F4" opacity="1" depth=".35" height="12" width="12"></a-box>
         
 
 
         <!--near wall-->
             <!--l/r-->
-        <a-box position="-11 5 -19.5" color="#6173F4" opacity="0.8" depth=".01" height="12" width="13"></a-box>
-        <a-box position="11 5 -19.5" color="#6173F4" opacity="0.8" depth=".01" height="12" width="13"></a-box>
+        <a-box position="-9.75 5 -19.5" color="#6173F4" opacity="1" depth=".01" height="12" width="15.5"></a-box>
+        <a-box position="11 5 -19.5" color="#6173F4" opacity="1" depth=".01" height="12" width="13"></a-box>
             <!--top-->
-        <a-box position="0 8 -19.5" color="#6173F4" opacity="0.8" depth=".01" height="6" width="10"></a-box>
+        <a-box position="0 8 -19.5" color="#6173F4" opacity="1" depth=".01" height="7" width="10"></a-box>
 
 
-        <div ng-view>
-            
-        </div>
+        <!--canvases-->
+        <a-box id="1" position="-10 3 -19.59" color="#020338" opacity="0.8" depth=".09" height="2" width="3"></a-box>
+        <a-box id="2" position="-17.5 3 -27.5" color="#020338" opacity="0.8" depth="3" height="2" width="0.09"></a-box>
+        <a-box id="3" position="-17.5 3 -38.75" color="#020338" opacity="0.8" depth="3" height="2" width="0.09"></a-box>
+        <a-box id="4" position="-11.5 3 -46.8" color="#020338" opacity="0.8" depth=".09" height="2" width="3"></a-box>
+        <a-box id="5" position="-11.5 3 -47.2" color="#020338" opacity="0.8" depth=".09" height="2" width="3"></a-box>
+        <a-box id="6" position="-17.5 3 -53.2" color="#020338" opacity="0.8" depth="3" height="2" width="0.09"></a-box>
+        <a-box id="7" position="-10 3 -59.4" color="#020338" opacity="0.8" depth=".09" height="2" width="3"></a-box>
+        <a-box id="8" position="0 3 -59.4" color="#020338" opacity="0.8" depth=".09" height="2" width="3"></a-box>
+        <a-box id="9" position="10 3 -59.4" color="#020338" opacity="0.8" depth=".09" height="2" width="3"></a-box>
+        <a-box id="10" position="17.5 3 -53.2" color="#020338" opacity="0.8" depth="3" height="2" width="0.09"></a-box>
+        <a-box id="11" position="11.5 3 -47.2" color="#020338" opacity="0.8" depth=".09" height="2" width="3"></a-box>
+        <a-box id="12" position="11.5 3 -46.8" color="#020338" opacity="0.8" depth=".09" height="2" width="3"></a-box>
+        <a-box id="13" position="17.5 3 -38.75" color="#020338" opacity="0.8" depth="3" height="2" width="0.09"></a-box>
+        <a-box id="14" position="17.5 3 -27.5" color="#020338" opacity="0.8" depth="3" height="2" width="0.09"></a-box>
+        <a-box id="15" position="10 3 -19.59" color="#020338" opacity="0.8" depth=".09" height="2" width="3"></a-box>
+        <a-box id="16" position="0 3 -33.15" color="#020338" opacity="0.8" depth=".09" height="2" width="3"></a-box>
+        
+
 
 
         <!--model assets-->
