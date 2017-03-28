@@ -1,6 +1,7 @@
-console.log('Gallery Factory');
+var rijMuse = angular.module('rijMuse');
 
 rijMuse.factory('galleryFactory', ['canvasFactory', function(canvasFactory) {
+    console.log('Gallery Factory');
     var makeGallery = function(jsonData){
         var newGallery = {};
         newGallery.artList = jsonData.contentPage.artObjectSet;

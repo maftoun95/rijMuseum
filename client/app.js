@@ -11,7 +11,7 @@ rijMuse.config(function($routeProvider){
     .when('/vermeer', {
         // templateUrl: '/../partials/show.html'
     })
-    .when('/vermeer', {
+    .when('/paper', {
         // templateUrl: '/../partials/show.html'
     })
     .otherwise({

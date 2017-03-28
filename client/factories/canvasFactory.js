@@ -1,7 +1,8 @@
-console.log('Canvas Factory');
+var rijMuse = angular.module('rijMuse');
 
 rijMuse.factory('canvasFactory', ['$http', function($http) {
 
+    console.log('Canvas Factory');
     // This function takes the JSON data from an API call for a *SINGLE SPECIFIC* image and 'converts' it into a canvas object.
     function convertToCanvas(id){
         var prefix = 'https://www.rijksmuseum.nl/api/nl/collection/';

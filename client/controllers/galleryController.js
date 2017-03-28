@@ -1,7 +1,6 @@
-var rijMuse = angular.module('rijMuse', []);
+var rijMuse = angular.module('rijMuse');
 
-console.log("Gallery Controller");
-rijMuse.controller('galleryController', ['$http', 'galleryFactory', function($http, galleryFactory){
+rijMuse.controller('galleryController', ['$http', '$routeParams', 'galleryFactory', function($http, $routeParams, galleryFactory){
     console.log("In galleryController")
     var galleryPrefix = 'https://www.rijksmuseum.nl/api/pages/en/rijksstudio/'
     var keyJson = '?key=xvBxNCX5&format=json&';
