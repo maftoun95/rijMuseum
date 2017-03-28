@@ -1,8 +1,10 @@
-console.log('Gallery Factory');
+// var rijMuse = angular.module('rijMuse');
 
 rijMuse.factory('galleryFactory', ['canvasFactory', function(canvasFactory) {
-    var makeGallery = function(jsonData){
-        var newGallery = {};
+    console.log('Gallery Factory');
+    var newGallery = {};
+    newGallery.makeGallery = function(jsonData){
+        console.log("JSON Data IN FACTORY: " + jsonData)
         newGallery.artList = jsonData.contentPage.artObjectSet;
         newGallery.text = jsonData.contentPage.body.markdown;
         newGallery.splash = jsonData.contentPage.headerImage;
@@ -10,6 +12,6 @@ rijMuse.factory('galleryFactory', ['canvasFactory', function(canvasFactory) {
             temp = canvasFactory.makeCanvas(newGallery.artList[i]);
             newGallery.artList[i] = temp;
         }
-        return newGallery;
     }
+    return newGallery;
 }]);

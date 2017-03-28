@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--link to a-frame cdn-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.5.0/aframe.js"></script>
+    <script src="https://code.angularjs.org/1.6.3/angular.js"></script>
+    <script src="https://code.angularjs.org/1.6.3/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src = "./factories/galleryFactory.js"></script>
+    <script src = "./factories/canvasFactory.js"></script>
+    <script src = "./controllers/galleryController.js"></script>
+
+</head>
+<body ng-app="rijMuse" ng-controller = "galleryController">
+    <a href="#!/gallery/vermeer">Vermeer</a>  -----   <a href="#!/gallery/vanGogh">VanGogh</a>
+    <p>{{theGallery}}</p>
+</body>
+</html>
