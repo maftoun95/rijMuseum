@@ -1,20 +1,25 @@
 var rijMuse = angular.module('rijMuse', ['ngRoute']);
 
-rijMuse.config(function($routeProvider){
+rijMuse.config(['$routeProvider', function($routeProvider){
     $routeProvider
-    .when('/rembrandt', {
-        // templateUrl: '/../partials/new.html'
+    .when('gallery/:id', {
+        resolve: {
+            theGallery: function(galleryController){
+                console.log("Triggered! ID: " + id)
+                return galleryController.getGallery(id);
+            }
+        }
     })
     .when('/vanGogh', {
-        // templateUrl: '/../partials/edit.html'
+        templateUrl: '/../partials/canvases.html'
     })
     .when('/vermeer', {
-        // templateUrl: '/../partials/show.html'
+        templateUrl: '/../partials/canvases.html'
     })
     .when('/paper', {
-        // templateUrl: '/../partials/show.html'
+        templateUrl: '/../partials/canvases.html'
     })
     .otherwise({
-        // templateUrl: '/../partials/home.html'
+        templateUrl: '/../partials/canvases.html'
     })
-});
+}]);
