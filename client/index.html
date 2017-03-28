@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="rijMuse">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
     <script src="./controllers/galleryController.js"></script>  
 </head>
-<body>
+<body ng-controller="galleryController">
     <a-scene>
         <!--camera-->
         <!--<a-entity camera="userHeight: 1.6" look-controls position="0 0 -30"></a-entity>-->
@@ -50,17 +50,17 @@
 
         <!--elevator controlls-->
             <!--panel-->
-        <a-box position="2.7 2 -19.4" color="#6173F4" opacity="0.8" depth=".3" height="1.5" width="1"></a-box>
+        <a-box position="2.7 1.8 -19.4" color="#6173F4" opacity="0.8" depth=".3" height="1.3" width="1"></a-box>
             <!--buttons-->
-
-
-
-
-
-
-
-
-        <a-box position="2.2 2.2 -19.2" color="#0E4D3A" opacity="0.8" depth=".17" height=".15" width=".15"></a-box>
+                <!--TOP LEFT-->
+        <a-box position="2.5 2.05 -19.2" color="#0E4D3A" opacity="0.8" depth=".11" height=".15" width=".15"></a-box>
+                <!--TOP RIGHT-->
+        <a-box position="2.93 2.05 -19.2" color="#0E4D3A" opacity="0.8" depth=".11" height=".15" width=".15"></a-box>
+                <!--LOW LEFT-->
+        <a-box position="2.5 1.55 -19.2" color="#0E4D3A" opacity="0.8" depth=".11" height=".15" width=".15"></a-box>
+                <!--LOW RIGHT-->
+        <a-box position="2.93 1.55 -19.2" color="#7C0006" opacity="0.8" depth=".11" height=".15" width=".15"></a-box>
+        
         
 
         <!--main gallery-->
@@ -91,7 +91,9 @@
         <a-box position="0 8 -19.5" color="#6173F4" opacity="0.8" depth=".01" height="6" width="10"></a-box>
 
 
-
+        <div ng-view>
+            
+        </div>
 
 
         <!--model assets-->
@@ -103,7 +105,7 @@
 
 
             <!--environment-->
-        <a-sky color="#ECECEC"></a-sky>
+        <a-sky color="#FF704E"></a-sky>
     </a-scene>
 </body>
 </html>
