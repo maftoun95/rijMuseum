@@ -60,7 +60,7 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
             alert("Sorry, this wing is closed. Try a different gallery!")
         });
     }
-    console.log(getGallery('paper'));
+    // console.log(getGallery('paper'));
 
 }])
 

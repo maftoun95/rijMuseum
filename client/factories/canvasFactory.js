@@ -36,7 +36,7 @@ rijMuse.factory('canvasFactory', [
                     newCanvas.text = jsonData.data.artObject.label.description;
                 }
                 console.log('-------------------------------------------------------------');
-                console.log('New Canvas: ' + JSON.stringify(newCanvas))
+                // console.log('New Canvas: ' + JSON.stringify(newCanvas))
                 console.log('-------------------------------------------------------------');
                 // Returns the canvas object.
                 callback(newCanvas);
