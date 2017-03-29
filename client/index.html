@@ -7,29 +7,31 @@
     <title>Rijksmuseum VR </title>
     <!--link to a-frame cdn-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.5.0/aframe.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
-    <script src="./controllers/galleryController.js"></script>  
+    <script src="https://code.angularjs.org/1.6.3/angular.js"></script>
+    <script src="https://code.angularjs.org/1.6.3/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src = "./factories/galleryFactory.js"></script>
+    <script src = "./factories/canvasFactory.js"></script>
+    <script src = "./controllers/galleryController.js"></script>
+    
 </head>
 <body ng-controller="galleryController">
     <a-scene>
-        <!--lighting-->
-        <!--<a-entity light="type: ambient; color: #CCC"></a-entity>-->
-        <!--<a-light type="directional" position="0 0 0" rotation="-90 0 0"></a-light>-->
-
         <!--camera-->
-        <a-camera position="0 0 -22"><a-cursor color="#660000"></a-cursor></a-camera>
+        <a-camera position="3.55 0 -11.5"><a-cursor color="#610026"></a-cursor></a-camera>
 
         <!--texture asset-->
         <a-assets>
             <!--3d models-->
             <a-asset-item id="tree" src="./images/star-wars-vader-tie-fighter.dae"></a-asset-item>
-
             <!--textures-->
             <img id="floorTexture" src="./images/floorTile.jpg">
             <img id="wallTexture" src="./images/wall1.jpg">
             <img id="partition" src="./images/partition.jpg">
-            <!--ADD A SECOND WALL REXTURE FOR PARTITION WALLS-->
-
+            <img id="metal" src="./images/metal.jpg">
+            <img id="floorTexture" src="./images/floorTile.jpg">
+            <img id="floor" src="./images/carpet.jpg">
+            
         </a-assets>
 
         <!--load partials-->
@@ -39,51 +41,57 @@
 
         <!--base entrance hallway-->
             <!--floor-->
-        <a-box position="0 -1 -10" color="#BABDCE" opacity="0.8" depth="10" height=".01" width="10"></a-box>
+        <a-box position="0 -1 -10" color="#BABDCE" opacity="1" depth="10" height=".01" width="10"></a-box>
             <!--ceiling-->
-        <a-box position="0 9 -10" color="#1F2130" opacity="0.8" depth="10" height=".01" width="10"></a-box>
+        <a-box position="0 9 -10" color="#1F2130" opacity="1" depth="10" height=".01" width="10"></a-box>
             <!--walls-->
-        <a-box position="5 4 -10" color="#6173F4" opacity="0.8" depth="10" height="10" width=".01"></a-box>
-        <a-box position="-5 4 -10" color="#6173F4" opacity="0.8" depth="10" height="10" width=".01"></a-box>
+        <a-box position="5 4 -10" color="#6173F4" opacity="1" depth="10" height="10" width=".01"></a-box>
+        <a-box position="-5 4 -10" color="#6173F4" opacity="1" depth="10" height="10" width=".01"></a-box>
         <!--elevator wall-->
             <!--l/r of elevator door-->
-        <a-box position="-3.5 4 -15" color="#6173F4" opacity="0.8" depth=".01" height="10" width="3"></a-box>
-        <a-box position="3.5 4 -15" color="#6173F4" opacity="0.8" depth=".01" height="10" width="3"></a-box>
+        <a-box position="-3.5 4 -15" color="#6173F4" opacity="1" depth=".01" height="10" width="3"></a-box>
+        <a-box position="3.5 4 -15" color="#6173F4" opacity="1" depth=".01" height="10" width="3"></a-box>
             <!--above elevator door-->
-        <a-box position="0 7.5 -15" color="#6173F4" opacity="0.8" depth=".01" height="4" width="4"></a-box>
+        <a-box position="0 7.5 -15" color="#6173F4" opacity="1" depth=".01" height="4" width="4"></a-box>
 
+        <!--call elevator-->
+            <!--panel-->
+        <a-box position="2.7 1.5 -14.89" opacity="1" depth=".175" height="1.3" width="1" material="src:#metal; repeat: 0.5 0.5; side: both; shader: flat"></a-box>
+            <!--call button-->
+        <a-entity id="mainDoor" geometry="primitive: cylinder; height: .12; radius: .12" material="side: double; color:#0E4D3A" rotation="0 90 90"  position="2.7 1.75 -14.77"><a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="2.7 1.75 -14.77" to="2.7 1.75 -14.82" repeat="1" direction="alternate" dur="99"></a-animation></a-entity>
 
         <!--elevator-->
             <!--floor-->
-        <a-box position="0 -1 -17.25" color="#BABDCE" opacity="0.8" depth="4.5" height=".01" width="10"></a-box>
+        <a-box position="0 -1 -17.25" opacity="1" depth="4.5" height=".01" width="10" material="src:#floor; repeat: 1 0.8; side: both; shader: flat"></a-box>
             <!--ceiling-->
-        <a-box position="0 5.5 -17.25" color="#1F2130" opacity="0.8" depth="4.5" height=".01" width="10"></a-box>
+        <a-box position="0 5.5 -17.25" color="#1F2130" opacity="1" depth="4.5" height=".01" width="10"></a-box>
             <!--walls-->
-        <a-box position="3.5 2.5 -17.25" color="#6173F4" opacity="0.8" depth="4.5" height="7" width=".01"></a-box>
-        <a-box position="-3.5 2.5 -17.25" color="#6173F4" opacity="0.8" depth="4.5" height="7" width=".01"></a-box>
+        <a-box position="3.5 2.5 -17.25" color="#6173F4" opacity="1" depth="4.5" height="7" width=".01"></a-box>
+        <a-box position="-3.5 2.5 -17.25" color="#6173F4" opacity="1" depth="4.5" height="7" width=".01"></a-box>
         <!--back elevator wall-->
             <!--l/r of elevator door-->
-        <a-box position="-3.5 4 -19.5" color="#6173F4" opacity="0.8" depth=".01" height="10" width="3"></a-box>
-        <a-box position="3.5 4 -19.5" color="#6173F4" opacity="0.8" depth=".01" height="10" width="3"></a-box>
+        <a-box position="-3.5 4 -19.5" color="#6173F4" opacity="1" depth=".01" height="10" width="3"></a-box>
+        <a-box position="3.5 4 -19.5" color="#6173F4" opacity="1" depth=".01" height="10" width="3"></a-box>
             <!--above elevator door-->
-        <a-box position="0 6.5 -19.5" color="#6173F4" opacity="0.8" depth=".01" height="4" width="4"></a-box>
+        <a-box position="0 6.5 -19.5" color="#6173F4" opacity="1" depth=".01" height="4" width="4"></a-box>
+
 
         <!--elevator controlls-->
             <!--panel-->
-        <a-box position="2.7 1.8 -19.375" color="#6173F4" opacity="0.8" depth=".225" height="1.3" width="1"></a-box>
+        <a-box position="2.7 1.8 -19.375" material="src:#metal; repeat: 0.5 0.5; side: both; shader: flat" opacity="1" depth=".225" height="1.3" width="1"></a-box>
             <!--buttons-->
                 <!--TOP LEFT-->
-        <a-box position="2.5 2.05 -19.2" color="#0E4D3A" opacity="0.8" depth=".11" height=".15" width=".15"></a-box>
+        <a-entity id="rembrandt" geometry="primitive: cylinder; height: .12; radius: .12" position="2.5 2.05 -19.2" material="side: double; color:#0E4D3A" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15"><a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="2.5 2.05 -19.2" to="2.5 2.05 -19.30" repeat="1" direction="alternate" dur="99"></a-animation></a-entity>
                 <!--TOP RIGHT-->
-        <a-box position="2.93 2.05 -19.2" color="#0E4D3A" opacity="0.8" depth=".11" height=".15" width=".15"></a-box>
+        <a-entity id="vanGoh" geometry="primitive: cylinder; height: .12; radius: .12" position="2.93 2.05 -19.2" material="side: double; color:#0E4D3A" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15"><a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="2.93 2.05 -19.2" to="2.93 2.05 -19.30" repeat="1" direction="alternate" dur="99"></a-animation></a-entity>
                 <!--LOW LEFT-->
-        <a-box position="2.5 1.55 -19.2" color="#0E4D3A" opacity="0.8" depth=".11" height=".15" width=".15"></a-box>
+        <a-entity id="vermeer" geometry="primitive: cylinder; height: .12; radius: .12" position="2.5 1.55 -19.2" material="side: double; color:#0E4D3A" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15"><a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="2.5 1.55 -19.2" to="2.5 1.55 -19.30" repeat="1" direction="alternate" dur="99"></a-animation></a-entity>
                 <!--LOW RIGHT-->
-        <a-box position="2.93 1.55 -19.2" color="#7C0006" opacity="0.8" depth=".11" height=".15" width=".15"></a-box>
+        <a-entity id="paper" geometry="primitive: cylinder; height: .12; radius: .12" position="2.93 1.55 -19.2" material="side: double; color:darkred" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15"><a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="2.93 1.55 -19.2" to="2.93 1.55 -19.30" repeat="1" direction="alternate" dur="99"></a-animation></a-entity>
         
         <!--main gallery-->
             <!--floor-->
-        <a-box material="src:#floorTexture; repeat: 5 5.5; shader: flat" position="0 -1 -39.5" opacity="0.8" depth="40" height=".01" width="35"></a-box>
+        <a-box material="src:#floorTexture; repeat: 7 7.5; shader: flat" position="0 -1 -39.5" opacity="1" depth="40" height=".01" width="35"></a-box>
             <!--ceiling-->
         <a-box position="0 11 -39.5" color="#1F2130" opacity="1" depth="40" height=".01" width="35"></a-box>
             <!--l/r walls-->
@@ -93,10 +101,10 @@
         <a-box position="0 5 -59.5" material="src:#wallTexture; repeat: 15 5; shader: flat" opacity="1" depth=".01" height="12" width="35"></a-box>
         <!--near wall-->
             <!--l/r-->
-        <a-box position="-9.75 5 -19.53" color="#C6C5CA" opacity="1" depth=".01" height="12" width="15.5" material="src:#wallTexture; repeat: 5 5; side: both; shader: flat"></a-box>
-        <a-box position="9.75 5 -19.53" color="#C6C5CA" opacity="1" depth=".01" height="12" width="15.5" material="src:#wallTexture; repeat: 5 5; side: both; shader: flat"></a-box>
+        <a-box position="-9.75 5 -19.63" color="#C6C5CA" opacity="1" depth=".01" height="12" width="15.5" material="src:#wallTexture; repeat: 5 5; side: both; shader: flat"></a-box>
+        <a-box position="9.75 5 -19.63" color="#C6C5CA" opacity="1" depth=".01" height="12" width="15.5" material="src:#wallTexture; repeat: 5 5; side: both; shader: flat"></a-box>
             <!--top-->
-        <a-box position="0 8 -19.53" color="#C6C5CA" opacity="1" depth=".01" height="7" width="10" material="src:#wallTexture; repeat: 5 5; side: both; shader: flat"></a-box>
+        <a-box position="0 8 -19.63" color="#C6C5CA" opacity="1" depth=".01" height="7" width="10" material="src:#wallTexture; repeat: 5 5; side: both; shader: flat"></a-box>
             <!--separators-->
                 <!--left-->
         <a-box position="-11.5 5 -47" opacity="1" depth=".35" height="12" width="12" material="src:#partition; repeat: 2 2; side: both; shader: flat" color="#EEFEFF"></a-box>
@@ -106,7 +114,7 @@
         <a-box position="0 5 -33" opacity="1" depth=".35" height="12" width="12" material="src:#partition; repeat: 2 2; side: both; shader: flat" color="#EEFEFF"></a-box>
 
         <!--canvases-->
-        <a-box id="1" position="-10 3 -19.59" color="#020338" opacity="1" depth=".09" height="2" width="3"></a-box>
+        <a-box id="1" position="-10 3 -19.69" color="#020338" opacity="1" depth=".09" height="2" width="3"></a-box>
         <a-box id="2" position="-17.5 3 -27.5" color="#020338" opacity="1" depth="3" height="2" width="0.09"></a-box>
         <a-box id="3" position="-17.5 3 -38.75" color="#020338" opacity="1" depth="3" height="2" width="0.09"></a-box>
         <a-box id="4" position="-11.5 3 -46.8" color="#020338" opacity="1" depth=".09" height="2" width="3"></a-box>
@@ -120,19 +128,20 @@
         <a-box id="12" position="11.5 3 -46.8" color="#020338" opacity="1" depth=".09" height="2" width="3"></a-box>
         <a-box id="13" position="17.5 3 -38.75" color="#020338" opacity="1" depth="3" height="2" width="0.09"></a-box>
         <a-box id="14" position="17.5 3 -27.5" color="#020338" opacity="1" depth="3" height="2" width="0.09"></a-box>
-        <a-box id="15" position="10 3 -19.59" color="#020338" opacity="1" depth=".09" height="2" width="3"></a-box>
+        <a-box id="15" position="10 3 -19.69" color="#020338" opacity="1" depth=".09" height="2" width="3"></a-box>
         <a-box id="16" position="0 3 -33.22" color="#020338" opacity="1" depth=".09" height="2" width="3"></a-box>
         
 
 
 
-        <!--model assets-->
-            <!--tie fighter for reasons-->
+        
+        <!--tie fighter for reasons-->
         <a-entity collada-model="#tree" position="0 1.6 -30"></a-entity>
 
 
             <!--environment-->
         <a-sky color="#FF704E"></a-sky>
     </a-scene>
+    <script src="script.js"></script>
 </body>
 </html>
