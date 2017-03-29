@@ -29,7 +29,7 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
         }).then(function successCallback(jsonData) {
             // this callback will be called asynchronously
             // when the response is available
-            // console.log("JSON = " + JSON.stringify(jsonData));
+            console.log("JSON = " + JSON.stringify(jsonData));
             //Takes JSON data and converts it into a gallery object
             var newGallery = {}
             newGallery.artList = jsonData.data.contentPage.artObjectSet;
@@ -55,6 +55,6 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
             alert("Sorry, this wing is closed. Try a different gallery!")
         });
     }
-    // console.log(getGallery('paper'));
+    console.log(getGallery('paper'));
 
 }])

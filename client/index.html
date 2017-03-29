@@ -18,7 +18,7 @@
 <body ng-controller="galleryController">
     <a-scene>
         <!--camera-->
-        <a-camera position="3.55 0 -11.5"><a-cursor color="#610026"></a-cursor></a-camera>
+        <a-camera position="0 1.5 -11.5"><a-cursor color="#610026"></a-cursor></a-camera>
 
         <!--texture asset-->
         <a-assets>
@@ -74,6 +74,14 @@
         <a-box position="3.5 4 -19.5" color="#6173F4" opacity="1" depth=".01" height="10" width="3"></a-box>
             <!--above elevator door-->
         <a-box position="0 6.5 -19.5" color="#6173F4" opacity="1" depth=".01" height="4" width="4"></a-box>
+
+        <!--sliding doors-->
+            <!--front doors-->
+        <a-box id="flDoor" position="-1.1 2.2 -15.06" color="#125749" opacity="0.93" depth=".06" height="6.75" width="2.22"><a-animation begin="click" easing="ease-in-out" attribute="position" fill="backwards" from="-1.1 2.2 -15.06" to="-3.32 2.2 -15.06" repeat="1" direction="alternate" dur="2000"></a-animation></a-box>
+        <a-box id="frDoor" position="1.1 2.2 -15.06" color="#125749" opacity="0.93" depth=".06" height="6.75" width="2.22"><a-animation begin="click" easing="ease-in-out" attribute="position" fill="backwards" from="1.1 2.2 -15.06" to="3.32 2.2 -15.06" repeat="1" direction="alternate" dur="2000"></a-animation></a-box>d
+            <!--back doors-->
+        <a-box id="blDoor" position="-1.1 1.75 -19.59" color="#125749" opacity="0.93" depth=".06" height="5.8" width="2.22"><a-animation begin="click" easing="ease-in-out" attribute="position" fill="backwards" from="-1.1 1.75 -19.59" to="-3.32 1.75 -19.59" repeat="1" direction="alternate" dur="2000"></a-animation></a-box>
+        <a-box id="brDoor" position="1.1 1.75 -19.59" color="#125749" opacity="0.93" depth=".06" height="5.8" width="2.22"><a-animation begin="click" easing="ease-in-out" attribute="position" fill="backwards" from="1.1 1.75 -19.59" to="3.32 1.75 -19.59" repeat="1" direction="alternate" dur="2000"></a-animation></a-box>
 
 
         <!--elevator controlls-->

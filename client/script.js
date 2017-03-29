@@ -9,7 +9,7 @@ mainDoor.addEventListener('click', function(){
     console.log('yay main button')
 })
 rembrandt.addEventListener('click', function(){
-    console.log('fire controller call to API: rembrandt')
+    galleryController.getGallery('rembrandt');
 })
 vanGoh.addEventListener('click', function(){
     console.log('fire controller call to API: vanGoh')
