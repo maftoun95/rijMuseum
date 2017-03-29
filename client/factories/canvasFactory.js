@@ -3,7 +3,7 @@
 rijMuse.factory('canvasFactory', [
     '$http', 
     function canvasFactory($http) {
-        return function(canvasID){
+        return function(canvasID, callback){
             var newCanvas = {};
             var prefix = 'https://www.rijksmuseum.nl/api/en/collection/';
             var suffix = '?key=xvBxNCX5&format=json&';
@@ -18,12 +18,12 @@ rijMuse.factory('canvasFactory', [
                 console.log("Canvas JSON Data: " + JSON.stringify(jsonData))
                 newCanvas.id = jsonData.data.artObject.id;
                 // Dimension data should be in cm. If you have trouble rendering, check dimensions[i].unit.
-                if(jsonData.data.artObject.dimensions){
-                    newCanvas.height = jsonData.data.artObject.dimensions[0].value;
-                    newCanvas.width =jsonData.data.artObject.dimensions[1].value;
-                }else{
+                if(jsonData.data.artObject.webImage != null){
                     newCanvas.height = jsonData.data.artObject.webImage.height;
                     newCanvas.width =jsonData.data.artObject.webImage.width;
+                }else{
+                    newCanvas.height = jsonData.data.artObject.dimensions[0].value;
+                    newCanvas.width =jsonData.data.artObject.dimensions[1].value;
                 }
                 
                 newCanvas.url = jsonData.data.artObject.webImage.url;
@@ -39,10 +39,15 @@ rijMuse.factory('canvasFactory', [
                 console.log('New Canvas: ' + JSON.stringify(newCanvas))
                 console.log('-------------------------------------------------------------');
                 // Returns the canvas object.
+                callback(newCanvas);
                 return newCanvas;
             }, function errorCallback(response) {
                 // called asynchronously if an error occurs
                 // or server returns response with an error status.
+                console.log('-------------------------------------------------------------');
+                console.log('Error Response: ' + JSON.stringify(response))
+                console.log('-------------------------------------------------------------');
+                
                 return response;
             });
         }
