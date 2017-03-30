@@ -128,9 +128,6 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
     // The URLs for for calls to the API are urlPrefix + 'optionalObjectNumber' + keyJson + 'searchTerms'
     var galleryIndex = {
         "rembrandt": "artists/rembrandt-harmensz-van-rijn",
-        "vanGogh": "styles/classicism",
-        "vermeer": "artists/johannes-vermeer",
-        "paper": "works-of-art/masterpieces-on-paper",
         "masterpieces": "works-of-art/masterpieces",
         "classicism": "styles/classicism",
         "rococo": "styles/rococo",
@@ -178,7 +175,7 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
 
             }
             // console.log("TEH BROWSER SEEED THE DATAS AZZZZ ***************************************" + JSON.stringify(newGallery))
-            console.log(JSON.stringify(newGallery));
+            console.log(JSON.stringify(newGallery, undefined, 2));
             $scope.theGallery = newGallery;
             return newGallery;
         }, function errorCallback(response) {
