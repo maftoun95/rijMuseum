@@ -16,7 +16,7 @@
     
 </head>
 <body ng-controller="galleryController">
-    <div>{{theGallery}}</div>
+    <!--<div>{{theGallery}}</div>-->
     <a-scene>
         <!--camera-->
         <a-camera position="0 1.5 -11.5"><a-cursor color="#610026"></a-cursor></a-camera>
@@ -82,7 +82,7 @@
         <!--sliding doors-->
             <!--front doors-->
         <a-box id="flDoor" position="-1.1 2.2 -15.06" color="#125749" opacity="0.93" depth=".06" height="6.75" width="2.22"><a-animation begin="click" easing="ease-in-out" attribute="position" fill="backwards" from="-1.1 2.2 -15.06" to="-3.32 2.2 -15.06" repeat="1" direction="alternate" dur="2000"></a-animation></a-box>
-        <a-box id="frDoor" position="1.1 2.2 -15.06" color="#125749" opacity="0.93" depth=".06" height="6.75" width="2.22"><a-animation begin="click" easing="ease-in-out" attribute="position" fill="backwards" from="1.1 2.2 -15.06" to="3.32 2.2 -15.06" repeat="1" direction="alternate" dur="2000"></a-animation></a-box>d
+        <a-box id="frDoor" position="1.1 2.2 -15.06" color="#125749" opacity="0.93" depth=".06" height="6.75" width="2.22"><a-animation begin="click" easing="ease-in-out" attribute="position" fill="backwards" from="1.1 2.2 -15.06" to="3.32 2.2 -15.06" repeat="1" direction="alternate" dur="2000"></a-animation></a-box>
             <!--back doors-->
         <a-box id="blDoor" position="-1.1 1.75 -19.59" color="#125749" opacity="0.93" depth=".06" height="5.8" width="2.22"><a-animation begin="click" easing="ease-in-out" attribute="position" fill="backwards" from="-1.1 1.75 -19.59" to="-3.32 1.75 -19.59" repeat="1" direction="alternate" dur="2000"></a-animation></a-box>
         <a-box id="brDoor" position="1.1 1.75 -19.59" color="#125749" opacity="0.93" depth=".06" height="5.8" width="2.22"><a-animation begin="click" easing="ease-in-out" attribute="position" fill="backwards" from="1.1 1.75 -19.59" to="3.32 1.75 -19.59" repeat="1" direction="alternate" dur="2000"></a-animation></a-box>
@@ -126,30 +126,22 @@
         <a-box position="0 5 -33" opacity="1" depth=".35" height="12" width="12" material="src:#partition; repeat: 2 2; side: both; shader: flat" color="#EEFEFF"></a-box>
 
         <!--canvases-->
-        <a-box id="1" position="-10 3 -19.69" material="src:#wallTexture; side: both; shader: flat" opacity="1" depth=".09" height="2" width="3"></a-box>
-        <a-box id="2" position="-17.5 3 -27.5" ng-src="{{theGallery.artList[1].url}}" opacity="1" depth="3" height="2" width="0.09"></a-box>
-        <a-box id="3" position="-17.5 3 -38.75" src="{{theGallery.artList[2].url}}" opacity="1" depth="3" height="2" width="0.09"></a-box>
-        <a-box id="4" position="-11.5 3 -46.8" src="{{theGallery.artList[3].url}}" opacity="1" depth=".09" height="2" width="3"></a-box>
-        <a-box id="5" position="-11.5 3 -47.2" src="{{theGallery.artList[4].url}}" opacity="1" depth=".09" height="2" width="3"></a-box>
-        <a-box id="6" position="-17.5 3 -53.2" src={{theGallery.artList[5].url}} opacity="1" depth="3" height="2" width="0.09"></a-box>
-        <a-box id="7" position="-10 3 -59.4" src={{theGallery.artList[6].url}} opacity="1" depth=".09" height="2" width="3"></a-box>
-        <a-box id="8" position="0 3 -59.4" src={{theGallery.artList[7].url}} opacity="1" depth=".09" height="2" width="3"></a-box>
-        <a-box id="9" position="10 3 -59.4" src={{theGallery.artList[8].url}} opacity="1" depth=".09" height="2" width="3"></a-box>
-        <a-box id="10" position="17.5 3 -53.2" src={{theGallery.artList[9].url}} opacity="1" depth="3" height="2" width="0.09"></a-box>
-        <a-box id="11" position="11.5 3 -47.2" src={{theGallery.artList[10].url}} opacity="1" depth=".09" height="2" width="3"></a-box>
-        <a-box id="12" position="11.5 3 -46.8" src={{theGallery.artList[11].url}} opacity="1" depth=".09" height="2" width="3"></a-box>
-        <a-box id="13" position="17.5 3 -38.75" src={{theGallery.artList[12].url}} opacity="1" depth="3" height="2" width="0.09"></a-box>
-        <a-box id="14" position="17.5 3 -27.5" src={{theGallery.artList[13].url}} opacity="1" depth="3" height="2" width="0.09"></a-box>
-        <a-box id="15" position="10 3 -19.69" src={{theGallery.artList[14].url}} opacity="1" depth=".09" height="2" width="3"></a-box>
-        <a-box id="16" position="0 3 -33.22" src={{theGallery.artList[15].url}} opacity="1" depth=".09" height="2" width="3"></a-box>
-        
-
-
-<a-box id="theCanvas" position="0 1.5 -20" depth="0.1" height=4 width="4" src="https://s-media-cache-ak0.pinimg.com/originals/0a/50/fb/0a50fb1f71271336e044697dcb408ba3.jpg">
-            <!--Content Location: https://www.rijksmuseum.nl/api/en/collection/sk-c-5?key=xvBxNCX5&format=json-->
-        </a-box>
-
-        <!--<a-entity position="0 1.5 -20" geometry="primitive: box" material="src:#can1" height="1" width="1" depth="1"></a-entity>-->
+        <a-box id="1" position="-10 3 -19.69" src="{{theGallery.artList[1].url}}" material="shader: flat" opacity="1" depth=".09" height="2" width="3"></a-box>
+        <a-box id="2" position="-17.5 3 -27.5" src="{{theGallery.artList[1].url}}" material="shader: flat" opacity="1" depth="3" height="2" width="0.09"></a-box>
+        <a-box id="3" position="-17.5 3 -38.75" src="{{theGallery.artList[2].url}}" material="shader: flat" opacity="1" depth="3" height="2" width="0.09"></a-box>
+        <a-box id="4" position="-11.5 3 -46.8" src="{{theGallery.artList[3].url}}" material="shader: flat" opacity="1" depth=".09" height="2" width="3"></a-box>
+        <a-box id="5" position="-11.5 3 -47.2" src="{{theGallery.artList[4].url}}" material="shader: flat" opacity="1" depth=".09" height="2" width="3"></a-box>
+        <a-box id="6" position="-17.5 3 -53.2" src="{{theGallery.artList[5].url}}" material="shader: flat" opacity="1" depth="3" height="2" width="0.09"></a-box>
+        <a-box id="7" position="-10 3 -59.4" src="{{theGallery.artList[6].url}}" material="shader: flat" opacity="1" depth=".09" height="2" width="3"></a-box>
+        <a-box id="8" position="0 3 -59.4" src="{{theGallery.artList[7].url}}" material="shader: flat" opacity="1" depth=".09" height="2" width="3"></a-box>
+        <a-box id="9" position="10 3 -59.4" src="{{theGallery.artList[8].url}}" material="shader: flat" opacity="1" depth=".09" height="2" width="3"></a-box>
+        <a-box id="10" position="17.5 3 -53.2" src="{{theGallery.artList[9].url}}" material="shader: flat" opacity="1" depth="3" height="2" width="0.09"></a-box>
+        <a-box id="11" position="11.5 3 -47.2" src="{{theGallery.artList[10].url}}" material="shader: flat" opacity="1" depth=".09" height="2" width="3"></a-box>
+        <a-box id="12" position="11.5 3 -46.8" src="{{theGallery.artList[11].url}}" material="shader: flat" opacity="1" depth=".09" height="2" width="3"></a-box>
+        <a-box id="13" position="17.5 3 -38.75" src="{{theGallery.artList[12].url}}" material="shader: flat" opacity="1" depth="3" height="2" width="0.09"></a-box>
+        <a-box id="14" position="17.5 3 -27.5" src="{{theGallery.artList[13].url}}" material="shader: flat" opacity="1" depth="3" height="2" width="0.09"></a-box>
+        <a-box id="15" position="10 3 -19.69" src="{{theGallery.artList[14].url}}" material="shader: flat" opacity="1" depth=".09" height="2" width="3"></a-box>
+        <a-box id="16" position="0 3 -33.22" src="{{theGallery.artList[15].url}}" material="shader: flat" opacity="1" depth=".09" height="2" width="3"></a-box>
 
 
         <!--tie fighter for reasons-->

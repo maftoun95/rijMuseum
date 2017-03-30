@@ -37,84 +37,84 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
                 text:'Eric Cartman wuz here'
             },
             {
-                url:'https://s-media-cache-ak0.pinimg.com/originals/0a/50/fb/0a50fb1f71271336e044697dcb408ba3.jpg',
+                url:'http://lh6.ggpht.com/ZYWwML8mVFonXzbmg2rQBulNuCSr3rAaf5ppNcUc2Id8qXqudDL1NSYxaqjEXyDLSbeNFzOHRu0H7rbIws0Js4d7s_M=s0',
                 height:'3',
                 width:'2',
                 maker:'Stan',
                 text:'Eric Cartman wuz here'
             },
             {
-                url:'https://s-media-cache-ak0.pinimg.com/originals/0a/50/fb/0a50fb1f71271336e044697dcb408ba3.jpg',
+                url:'http://lh6.ggpht.com/ZYWwML8mVFonXzbmg2rQBulNuCSr3rAaf5ppNcUc2Id8qXqudDL1NSYxaqjEXyDLSbeNFzOHRu0H7rbIws0Js4d7s_M=s0',
                 height:'3',
                 width:'2',
                 maker:'Stan',
                 text:'Eric Cartman wuz here'
             },
             {
-                url:'https://s-media-cache-ak0.pinimg.com/originals/0a/50/fb/0a50fb1f71271336e044697dcb408ba3.jpg',
+                url:'http://lh6.ggpht.com/ZYWwML8mVFonXzbmg2rQBulNuCSr3rAaf5ppNcUc2Id8qXqudDL1NSYxaqjEXyDLSbeNFzOHRu0H7rbIws0Js4d7s_M=s0',
                 height:'3',
                 width:'2',
                 maker:'Stan',
                 text:'Eric Cartman wuz here'
             },
             {
-                url:'https://s-media-cache-ak0.pinimg.com/originals/0a/50/fb/0a50fb1f71271336e044697dcb408ba3.jpg',
+                url:'http://lh6.ggpht.com/ZYWwML8mVFonXzbmg2rQBulNuCSr3rAaf5ppNcUc2Id8qXqudDL1NSYxaqjEXyDLSbeNFzOHRu0H7rbIws0Js4d7s_M=s0',
                 height:'3',
                 width:'2',
                 maker:'Stan',
                 text:'Eric Cartman wuz here'
             },
             {
-                url:'https://s-media-cache-ak0.pinimg.com/originals/0a/50/fb/0a50fb1f71271336e044697dcb408ba3.jpg',
+                url:'http://lh6.ggpht.com/ZYWwML8mVFonXzbmg2rQBulNuCSr3rAaf5ppNcUc2Id8qXqudDL1NSYxaqjEXyDLSbeNFzOHRu0H7rbIws0Js4d7s_M=s0',
                 height:'3',
                 width:'2',
                 maker:'Stan',
                 text:'Eric Cartman wuz here'
             },
             {
-                url:'https://s-media-cache-ak0.pinimg.com/originals/0a/50/fb/0a50fb1f71271336e044697dcb408ba3.jpg',
+                url:'http://lh6.ggpht.com/ZYWwML8mVFonXzbmg2rQBulNuCSr3rAaf5ppNcUc2Id8qXqudDL1NSYxaqjEXyDLSbeNFzOHRu0H7rbIws0Js4d7s_M=s0',
                 height:'3',
                 width:'2',
                 maker:'Stan',
                 text:'Eric Cartman wuz here'
             },
             {
-                url:'https://s-media-cache-ak0.pinimg.com/originals/0a/50/fb/0a50fb1f71271336e044697dcb408ba3.jpg',
+                url:'http://lh6.ggpht.com/ZYWwML8mVFonXzbmg2rQBulNuCSr3rAaf5ppNcUc2Id8qXqudDL1NSYxaqjEXyDLSbeNFzOHRu0H7rbIws0Js4d7s_M=s0',
                 height:'3',
                 width:'2',
                 maker:'Stan',
                 text:'Eric Cartman wuz here'
             },
             {
-                url:'https://s-media-cache-ak0.pinimg.com/originals/0a/50/fb/0a50fb1f71271336e044697dcb408ba3.jpg',
+                url:'http://lh6.ggpht.com/ZYWwML8mVFonXzbmg2rQBulNuCSr3rAaf5ppNcUc2Id8qXqudDL1NSYxaqjEXyDLSbeNFzOHRu0H7rbIws0Js4d7s_M=s0',
                 height:'3',
                 width:'2',
                 maker:'Stan',
                 text:'Eric Cartman wuz here'
             },
             {
-                url:'https://s-media-cache-ak0.pinimg.com/originals/0a/50/fb/0a50fb1f71271336e044697dcb408ba3.jpg',
+                url:'http://lh6.ggpht.com/ZYWwML8mVFonXzbmg2rQBulNuCSr3rAaf5ppNcUc2Id8qXqudDL1NSYxaqjEXyDLSbeNFzOHRu0H7rbIws0Js4d7s_M=s0',
                 height:'3',
                 width:'2',
                 maker:'Stan',
                 text:'Eric Cartman wuz here'
             },
             {
-                url:'https://s-media-cache-ak0.pinimg.com/originals/0a/50/fb/0a50fb1f71271336e044697dcb408ba3.jpg',
+                url:'http://lh6.ggpht.com/ZYWwML8mVFonXzbmg2rQBulNuCSr3rAaf5ppNcUc2Id8qXqudDL1NSYxaqjEXyDLSbeNFzOHRu0H7rbIws0Js4d7s_M=s0',
                 height:'3',
                 width:'2',
                 maker:'Stan',
                 text:'Eric Cartman wuz here'
             },
             {
-                url:'https://s-media-cache-ak0.pinimg.com/originals/0a/50/fb/0a50fb1f71271336e044697dcb408ba3.jpg',
+                url:'http://lh6.ggpht.com/ZYWwML8mVFonXzbmg2rQBulNuCSr3rAaf5ppNcUc2Id8qXqudDL1NSYxaqjEXyDLSbeNFzOHRu0H7rbIws0Js4d7s_M=s0',
                 height:'3',
                 width:'2',
                 maker:'Stan',
                 text:'Eric Cartman wuz here'
             },
             {
-                url:'https://s-media-cache-ak0.pinimg.com/originals/0a/50/fb/0a50fb1f71271336e044697dcb408ba3.jpg',
+                url:'http://lh6.ggpht.com/ZYWwML8mVFonXzbmg2rQBulNuCSr3rAaf5ppNcUc2Id8qXqudDL1NSYxaqjEXyDLSbeNFzOHRu0H7rbIws0Js4d7s_M=s0',
                 height:'3',
                 width:'2',
                 maker:'Stan',
@@ -177,7 +177,7 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
             alert("Sorry, this wing is closed. Try a different gallery!")
         });
     }
-    console.log(getGallery('paper'));
+    // console.log(getGallery('paper'));
 
 }])
 

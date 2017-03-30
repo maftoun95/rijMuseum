@@ -1,6 +1,6 @@
 var rijMuse = angular.module('rijMuse', ['ngRoute']);
 
-rijMuse.config(['$routeProvider', '$sceDelegateProvider', function($routeProvider, $sceDelegateProvider){
+rijMuse.config(['$routeProvider', '$sceProvider', function($routeProvider, $sceProvider){
     $routeProvider
     .when('gallery/:id', {
         resolve: {
@@ -24,5 +24,5 @@ rijMuse.config(['$routeProvider', '$sceDelegateProvider', function($routeProvide
     })
     // $sceDelegateProvider.resourceUrlWhitelist.push("http://lh6.ggpht.com");
     $sceProvider.enabled(false);
-}],
+}]
 );
