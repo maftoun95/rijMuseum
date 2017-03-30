@@ -7,6 +7,7 @@
     <title>Rijksmuseum VR</title>
     <!--link to a-frame cdn-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.5.0/aframe.js"></script>
+    <script src="https://unpkg.com/aframe-animation-component@^3.2.0/dist/aframe-animation-component.min.js"></script>
     <script src="https://code.angularjs.org/1.6.3/angular.js"></script>
     <script src="https://code.angularjs.org/1.6.3/angular-route.js"></script>
     <script src="app.js"></script>
@@ -49,10 +50,7 @@
             
         </a-assets>
 
-        <!--load partials-->
-        <div ng-view>
-            
-        </div>
+
 
         <!--base entrance hallway-->
             <!--floor-->
@@ -73,7 +71,7 @@
             <!--panel-->
         <a-box position="2.7 1.5 -14.89" opacity="1" depth=".175" height="1.3" width="1" material="src:#metal; repeat: 0.5 0.5; side: both; shader: flat"></a-box>
             <!--call button-->
-        <a-entity id="mainDoor" geometry="primitive: cylinder; height: .12; radius: .12" material="side: double; color:#0E4D3A" rotation="0 90 90"  position="2.7 1.75 -14.77"><a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="2.7 1.75 -14.77" to="2.7 1.75 -14.82" repeat="1" direction="alternate" dur="99"></a-animation></a-entity>
+        <a-entity id="mainDoor" geometry="primitive: cylinder; height: .12; radius: .12" material="side: double; color:#0E4D3A" rotation="0 90 90"  position="2.7 1.75 -14.77" animation__FD="dur:99; easing:easeInOut; property:position; startEvents:click;"></a-entity>
 
         <!--elevator-->
             <!--floor-->
@@ -93,7 +91,7 @@
         <!--sliding doors-->
             <!--front doors-->
         <a-box id="flDoor" position="-1.1 2.2 -15.06" color="#125749" opacity="0.988" depth=".06" height="6.75" width="2.22">
-            <a-animation begin="backDoors" easing="ease-in-out" attribute="position" fill="backwards" from="-1.1 2.2 -15.06" to="-3.32 2.2 -15.06" repeat="1" direction="alternate" dur="2000"></a-animation>
+            
         </a-box>
         <a-box id="frDoor" position="1.1 2.2 -15.06" color="#125749" opacity="0.988" depth=".06" height="6.75" width="2.22"><a-animation begin="backDoors" easing="ease-in-out" attribute="position" fill="backwards" from="1.1 2.2 -15.06" to="3.32 2.2 -15.06" repeat="1" direction="alternate" dur="2000"></a-animation></a-box>
             <!--back doors-->
@@ -103,28 +101,32 @@
 
         <!--elevator controlls-->
             <!--leftpanel-->
-        <a-box position="-2.7 2.3 -19.375" material="src:#metal; repeat: 0.5 0.5; side: both; shader: flat" opacity="1" depth=".225" height="2.3" width="1.25"></a-box>
+        <a-box position="-2.7 2.3 -19.375" material="src:#metal; repeat: 0.5 0.5; side: both; shader: flat" opacity="1" depth=".225" height="2.3" width="1.25"><a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="-2.93 3.05 -19.2" to="-2.93 3.05 -19.30" repeat="1" direction="alternate" dur="99"></a-animation></a-box>
             <!--buttons-->
                 <!--TOP LEFT-->
         <a-entity id="masterpieces" ng-click="getGallery('masterpieces')" geometry="primitive: cylinder; height: .12; radius: .12" position="-2.93 3.05 -19.2" material="side: double; color:#0E4D3A" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15"><a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="-2.93 3.05 -19.2" to="-2.93 3.05 -19.30" repeat="1" direction="alternate" dur="99"></a-animation></a-entity>
         <a-entity text="align:right;color:#ffffff;height:2.94;opacity:1;value:Masterpiece Collection;width:1.98;zOffset:0" position="-2.93 3.05 -19.2"></a-entity>
                 <!--TOP RIGHT-->
+                <!--HIGHEST-->
+        <a-entity id="masterpieces" ng-click="getGallery('masterpieces')" geometry="primitive: cylinder; height: .12; radius: .12" position="-2.93 3.05 -19.2" material="side: double; color:#0E4D3A" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15"><a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="-2.93 3.05 -19.2" to="-2.93 3.05 -19.30" repeat="1" direction="alternate" dur="99"></a-animation></a-entity>
+        <a-entity text="align:right;color:#ffffff;height:2.94;opacity:1;value:Masterpiece Collection;width:1.98;zOffset:0" position="-2.93 3.05 -19.2"></a-entity>
+                <!--MID TOP-->
         <a-entity id="classicism" ng-click="getGallery('classicism')" geometry="primitive: cylinder; height: .12; radius: .12" position="-2.93 2.55 -19.2" material="side: double; color:#0E4D3A" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15"><a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="-2.93 2.55 -19.2" to="-2.93 2.55 -19.30" repeat="1" direction="alternate" dur="99"></a-animation></a-entity>
-                <!--LOW LEFT-->
+                <!--MID LOW-->
         <a-entity id="rococo" ng-click="getGallery('rococo')" geometry="primitive: cylinder; height: .12; radius: .12" position="-2.93 2.05 -19.2" material="side: double; color:#0E4D3A" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15"><a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="-2.93 2.05 -19.2" to="-2.93 2.05 -19.30" repeat="1" direction="alternate" dur="99"></a-animation></a-entity>
-                <!--LOW RIGHT-->
+                <!--LOWEST-->
         <a-entity id="italianates" ng-click="getGallery('italianates')" geometry="primitive: cylinder; height: .12; radius: .12" position="-2.93 1.55 -19.2" material="side: double; color:darkred" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15"><a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="-2.93 1.55 -19.2" to="-2.93 1.55 -19.30" repeat="1" direction="alternate" dur="99"></a-animation></a-entity>
 
             <!--rightpanel-->
         <a-box position="2.7 2.3 -19.375" material="src:#metal; repeat: 0.5 0.5; side: both; shader: flat" opacity="1" depth=".225" height="2.3" width="1.25"></a-box>
             <!--buttons-->
-                <!--TOP LEFT-->
+                <!--HIGHEST-->
         <a-entity id="rembrandt" ng-click="getGallery('rembrandt')" geometry="primitive: cylinder; height: .12; radius: .12" position="2.93 3.05 -19.2" material="side: double; color:#0E4D3A" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15"><a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="2.93 3.05 -19.2" to="2.93 3.05 -19.30" repeat="1" direction="alternate" dur="99"></a-animation></a-entity>
-                <!--TOP RIGHT-->
+                <!--MID TOP-->
         <a-entity id="baroque" ng-click="getGallery('baroque')" geometry="primitive: cylinder; height: .12; radius: .12" position="2.93 2.55 -19.2" material="side: double; color:#0E4D3A" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15"><a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="2.93 2.55 -19.2" to="2.93 2.55 -19.30" repeat="1" direction="alternate" dur="99"></a-animation></a-entity>
-                <!--LOW LEFT-->
+                <!--MID LOW-->
         <a-entity id="mannerism" ng-click="getGallery('mannerism')" geometry="primitive: cylinder; height: .12; radius: .12" position="2.93 2.05 -19.2" material="side: double; color:#0E4D3A" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15"><a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="2.93 2.05 -19.2" to="2.93 2.05 -19.30" repeat="1" direction="alternate" dur="99"></a-animation></a-entity>
-                <!--LOW RIGHT-->
+                <!--LOWEST-->
         <a-entity id="renaissance" class="button" ng-click="getGallery('renaissance')" geometry="primitive: cylinder; height: .12; radius: .12" position="2.93 1.55 -19.2" material="side: double; color:darkred" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15"><a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="2.93 1.55 -19.2" to="2.93 1.55 -19.30" repeat="1" direction="alternate" dur="99"></a-animation></a-entity>
         
         <!--main gallery-->
