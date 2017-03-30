@@ -14,6 +14,7 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
                 height:'3',
                 width:'2',
                 maker:'Stan',
+                makerHeight:'3',
                 text:'Eric Cartman wuz here'
             },
             {
@@ -21,6 +22,7 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
                 height:'3',
                 width:'2',
                 maker:'Stan',
+                makerHeight:'3',
                 text:'Eric Cartman wuz here'
             },
             {
@@ -28,6 +30,7 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
                 height:'3',
                 width:'2',
                 maker:'Stan',
+                makerHeight:'3',
                 text:'Eric Cartman wuz here'
             },
             {
@@ -35,6 +38,7 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
                 height:'3',
                 width:'2',
                 maker:'Stan',
+                makerHeight:'3',
                 text:'Eric Cartman wuz here'
             },
             {
@@ -42,6 +46,7 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
                 height:'3',
                 width:'2',
                 maker:'Stan',
+                makerHeight:'3',
                 text:'Eric Cartman wuz here'
             },
             {
@@ -49,6 +54,7 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
                 height:'3',
                 width:'2',
                 maker:'Stan',
+                makerHeight:'3',
                 text:'Eric Cartman wuz here'
             },
             {
@@ -56,6 +62,7 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
                 height:'3',
                 width:'2',
                 maker:'Stan',
+                makerHeight:'3',
                 text:'Eric Cartman wuz here'
             },
             {
@@ -63,6 +70,7 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
                 height:'3',
                 width:'2',
                 maker:'Stan',
+                makerHeight:'3',
                 text:'Eric Cartman wuz here'
             },
             {
@@ -70,6 +78,7 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
                 height:'3',
                 width:'2',
                 maker:'Stan',
+                makerHeight:'3',
                 text:'Eric Cartman wuz here'
             },
             {
@@ -77,6 +86,7 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
                 height:'3',
                 width:'2',
                 maker:'Stan',
+                makerHeight:'3',
                 text:'Eric Cartman wuz here'
             },
             {
@@ -84,6 +94,7 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
                 height:'3',
                 width:'2',
                 maker:'Stan',
+                makerHeight:'3',
                 text:'Eric Cartman wuz here'
             },
             {
@@ -91,6 +102,7 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
                 height:'3',
                 width:'2',
                 maker:'Stan',
+                makerHeight:'3',
                 text:'Eric Cartman wuz here'
             },
             {
@@ -98,6 +110,7 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
                 height:'3',
                 width:'2',
                 maker:'Stan',
+                makerHeight:'3',
                 text:'Eric Cartman wuz here'
             },
             {
@@ -105,6 +118,7 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
                 height:'3',
                 width:'2',
                 maker:'Stan',
+                makerHeight:'3',
                 text:'Eric Cartman wuz here'
             },
             {
@@ -112,6 +126,7 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
                 height:'3',
                 width:'2',
                 maker:'Stan',
+                makerHeight:'3',
                 text:'Eric Cartman wuz here'
             },
             {
@@ -119,6 +134,7 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
                 height:'3',
                 width:'2',
                 maker:'Stan',
+                makerHeight:'3',
                 text:'Eric Cartman wuz here'
             }
         ]

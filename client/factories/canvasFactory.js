@@ -29,6 +29,7 @@ rijMuse.factory('canvasFactory', [
                 newCanvas.url = jsonData.data.artObject.webImage.url;
                 newCanvas.title = jsonData.data.artObject.label.title;
                 newCanvas.maker = jsonData.data.artObject.label.makerLine;
+                newCanvas.makerHeight = 2.75 - newCanvas.height/2
                 //Sets the description field, checking several spots for the appropriate data.
                 if (jsonData.data.artObject.plaqueDescriptionEnglish){
                     newCanvas.text = jsonData.data.artObject.plaqueDescriptionEnglish
