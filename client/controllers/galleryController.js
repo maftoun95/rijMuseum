@@ -3,7 +3,7 @@
 rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory', '$scope', function($http, $routeParams, canvasFactory, $scope){
 
     console.log("In galleryController")
-    var galleryPrefix = 'https://www.rijksmuseum.nl/api/pages/en/'
+    var galleryPrefix = 'https://www.rijksmuseum.nl/api/pages/en/rijksstudio/';
     var keyJson = '?key=xvBxNCX5&format=json&imgonly=true';
     $scope.tester = function(){
         console.log("oadsvilnsdvndsvklladsvnkladsvnknsdvklldsvnk");
@@ -130,10 +130,18 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
     
     // The URLs for for calls to the API are urlPrefix + 'optionalObjectNumber' + keyJson + 'searchTerms'
     var galleryIndex = {
-        "rembrandt": "rijksstudio/artists/rembrandt-harmensz-van-rijn",
-        "vanGogh": "rijksstudio/artists/vincent-van-gogh",
-        "vermeer": "rijksstudio/artists/johannes-vermeer",
-        "paper": "rijksstudio/works-of-art/masterpieces-on-paper"
+        "rembrandt": "artists/rembrandt-harmensz-van-rijn",
+        "vanGogh": "styles/classicism",
+        "vermeer": "artists/johannes-vermeer",
+        "paper": "works-of-art/masterpieces-on-paper",
+        "masterpieces": "works-of-art/masterpieces",
+        "classicism": "styles/classicism",
+        "rococo": "styles/rococo",
+        "italianates":"styles/italianates",
+        "baroque":"styles/baroque",
+        "mannerism":"styles/mannerism",
+        "renaissance":"styles/renaissance",
+        "gothic":"styles/gothic"
     }
 
 
