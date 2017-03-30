@@ -4,7 +4,124 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
     console.log("In galleryController")
     var galleryPrefix = 'https://www.rijksmuseum.nl/api/pages/en/'
     var keyJson = '?key=xvBxNCX5&format=json&imgonly=true';
-    $scope.theGallery = {};
+    $scope.theGallery = {
+        'splash':'https://i.kinja-img.com/gawker-media/image/upload/s--_WYd3ZqT--/18j4qz58pmh9ujpg.jpg',
+        'text':'Hey look. an easter egg. I guess that makes this spring themed!! ',
+        'artList': [
+            {
+                url:'http://lh6.ggpht.com/ZYWwML8mVFonXzbmg2rQBulNuCSr3rAaf5ppNcUc2Id8qXqudDL1NSYxaqjEXyDLSbeNFzOHRu0H7rbIws0Js4d7s_M=s0',
+                height:'3',
+                width:'2',
+                maker:'Stan',
+                text:'Eric Cartman wuz here'
+            },
+            {
+                url:'http://lh6.ggpht.com/ZYWwML8mVFonXzbmg2rQBulNuCSr3rAaf5ppNcUc2Id8qXqudDL1NSYxaqjEXyDLSbeNFzOHRu0H7rbIws0Js4d7s_M=s0',
+                height:'3',
+                width:'2',
+                maker:'Stan',
+                text:'Eric Cartman wuz here'
+            },
+            {
+                url:'http://lh6.ggpht.com/ZYWwML8mVFonXzbmg2rQBulNuCSr3rAaf5ppNcUc2Id8qXqudDL1NSYxaqjEXyDLSbeNFzOHRu0H7rbIws0Js4d7s_M=s0',
+                height:'3',
+                width:'2',
+                maker:'Stan',
+                text:'Eric Cartman wuz here'
+            },
+            {
+                url:'http://lh6.ggpht.com/ZYWwML8mVFonXzbmg2rQBulNuCSr3rAaf5ppNcUc2Id8qXqudDL1NSYxaqjEXyDLSbeNFzOHRu0H7rbIws0Js4d7s_M=s0',
+                height:'3',
+                width:'2',
+                maker:'Stan',
+                text:'Eric Cartman wuz here'
+            },
+            {
+                url:'https://s-media-cache-ak0.pinimg.com/originals/0a/50/fb/0a50fb1f71271336e044697dcb408ba3.jpg',
+                height:'3',
+                width:'2',
+                maker:'Stan',
+                text:'Eric Cartman wuz here'
+            },
+            {
+                url:'https://s-media-cache-ak0.pinimg.com/originals/0a/50/fb/0a50fb1f71271336e044697dcb408ba3.jpg',
+                height:'3',
+                width:'2',
+                maker:'Stan',
+                text:'Eric Cartman wuz here'
+            },
+            {
+                url:'https://s-media-cache-ak0.pinimg.com/originals/0a/50/fb/0a50fb1f71271336e044697dcb408ba3.jpg',
+                height:'3',
+                width:'2',
+                maker:'Stan',
+                text:'Eric Cartman wuz here'
+            },
+            {
+                url:'https://s-media-cache-ak0.pinimg.com/originals/0a/50/fb/0a50fb1f71271336e044697dcb408ba3.jpg',
+                height:'3',
+                width:'2',
+                maker:'Stan',
+                text:'Eric Cartman wuz here'
+            },
+            {
+                url:'https://s-media-cache-ak0.pinimg.com/originals/0a/50/fb/0a50fb1f71271336e044697dcb408ba3.jpg',
+                height:'3',
+                width:'2',
+                maker:'Stan',
+                text:'Eric Cartman wuz here'
+            },
+            {
+                url:'https://s-media-cache-ak0.pinimg.com/originals/0a/50/fb/0a50fb1f71271336e044697dcb408ba3.jpg',
+                height:'3',
+                width:'2',
+                maker:'Stan',
+                text:'Eric Cartman wuz here'
+            },
+            {
+                url:'https://s-media-cache-ak0.pinimg.com/originals/0a/50/fb/0a50fb1f71271336e044697dcb408ba3.jpg',
+                height:'3',
+                width:'2',
+                maker:'Stan',
+                text:'Eric Cartman wuz here'
+            },
+            {
+                url:'https://s-media-cache-ak0.pinimg.com/originals/0a/50/fb/0a50fb1f71271336e044697dcb408ba3.jpg',
+                height:'3',
+                width:'2',
+                maker:'Stan',
+                text:'Eric Cartman wuz here'
+            },
+            {
+                url:'https://s-media-cache-ak0.pinimg.com/originals/0a/50/fb/0a50fb1f71271336e044697dcb408ba3.jpg',
+                height:'3',
+                width:'2',
+                maker:'Stan',
+                text:'Eric Cartman wuz here'
+            },
+            {
+                url:'https://s-media-cache-ak0.pinimg.com/originals/0a/50/fb/0a50fb1f71271336e044697dcb408ba3.jpg',
+                height:'3',
+                width:'2',
+                maker:'Stan',
+                text:'Eric Cartman wuz here'
+            },
+            {
+                url:'https://s-media-cache-ak0.pinimg.com/originals/0a/50/fb/0a50fb1f71271336e044697dcb408ba3.jpg',
+                height:'3',
+                width:'2',
+                maker:'Stan',
+                text:'Eric Cartman wuz here'
+            },
+            {
+                url:'https://s-media-cache-ak0.pinimg.com/originals/0a/50/fb/0a50fb1f71271336e044697dcb408ba3.jpg',
+                height:'3',
+                width:'2',
+                maker:'Stan',
+                text:'Eric Cartman wuz here'
+            }
+        ]
+    };
     // List of all availible galleries.  To add a new gallery, take the URL of the page and copy everything from 
     
     // The URLs for for calls to the API are urlPrefix + 'optionalObjectNumber' + keyJson + 'searchTerms'
