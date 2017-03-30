@@ -29,8 +29,10 @@ var canvases = [c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14,c15,c16];
 // the animation is taking place in the html. here is where the cooresponding API calls will be made
 mainDoor.addEventListener('click', function(){
     console.log('yay main button')
+    doorAnimation.play()
 })
 rembrandt.addEventListener('click', function(){
+ 
     // controllaaaaaaa.getGallery("rembrandt")
 })
 vanGoh.addEventListener('click', function(){
@@ -42,3 +44,4 @@ vermeer.addEventListener('click', function(){
 paper.addEventListener('click', function(){
     console.log('fire controller call to API: paper')
 })
+
