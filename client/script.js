@@ -1,10 +1,10 @@
 // var controllaaaaaaa = require('./controllers/galleryController');
 
-var mainDoor = document.querySelector('#mainDoor');
-var rembrandt = document.querySelector('#rembrandt');
-var vanGoh = document.querySelector('#vanGoh');
-var vermeer = document.querySelector('#vermeer');
-var paper = document.querySelector('#paper');
+var mainDoor = document.getElementById('mainDoor');
+var rembrandt = document.getElementById('rembrandt');
+var vanGoh = document.getElementById('vanGoh');
+var vermeer = document.getElementById('vermeer');
+var paper = document.getElementById('paper');
 console.log("~~~~~~~~~~~~~~~~~",rembrandt)
 var c1 = document.getElementById('1');
 var c2 = document.getElementById('2');
