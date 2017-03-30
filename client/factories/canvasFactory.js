@@ -8,14 +8,14 @@ rijMuse.factory('canvasFactory', [
             var prefix = 'https://www.rijksmuseum.nl/api/en/collection/';
             var suffix = '?key=xvBxNCX5&format=json&';
             var queryUrl = prefix + canvasID + suffix;
-            console.log(queryUrl);
+            // console.log(queryUrl);
             $http({
                 method: 'GET',
                 url: queryUrl
             }).then(function successCallback(jsonData) {
                 // this callback will be called asynchronously
                 // when the response is available
-                console.log("Canvas JSON Data: " + JSON.stringify(jsonData))
+                // console.log("Canvas JSON Data: " + JSON.stringify(jsonData))
                 newCanvas.id = jsonData.data.artObject.id;
                 // Dimension data should be in cm. If you have trouble rendering, check dimensions[i].unit.
                 if(jsonData.data.artObject.webImage != null){
@@ -35,18 +35,18 @@ rijMuse.factory('canvasFactory', [
                 } else if (jsonData.data.artObject.label.description){
                     newCanvas.text = jsonData.data.artObject.label.description;
                 }
-                console.log('-------------------------------------------------------------');
-                console.log('New Canvas: ' + JSON.stringify(newCanvas))
-                console.log('-------------------------------------------------------------');
+                // console.log('-------------------------------------------------------------');
+                // console.log('New Canvas: ' + JSON.stringify(newCanvas))
+                // console.log('-------------------------------------------------------------');
                 // Returns the canvas object.
                 callback(newCanvas);
                 return newCanvas;
             }, function errorCallback(response) {
                 // called asynchronously if an error occurs
                 // or server returns response with an error status.
-                console.log('-------------------------------------------------------------');
-                console.log('Error Response: ' + JSON.stringify(response))
-                console.log('-------------------------------------------------------------');
+                // console.log('-------------------------------------------------------------');
+                // console.log('Error Response: ' + JSON.stringify(response))
+                // console.log('-------------------------------------------------------------');
                 
                 return response;
             });

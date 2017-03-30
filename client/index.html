@@ -20,14 +20,14 @@
     <a-scene>
         
 
-        <!--camera-->    0 1.5 -20.5
-        <a-camera position="5 1.6 -22.5"><a-cursor color="#610026"></a-cursor></a-camera>
+        <!--camera-->    
+        <a-camera position="0 1.5 -20.5"><a-cursor color="#610026"></a-cursor></a-camera>
 
         <!--texture asset-->
         <a-assets>
             <!--3d models-->
             <a-asset-item id="tree" src="./images/star-wars-vader-tie-fighter.dae"></a-asset-item>
-            <a-asset-item id="saturn" src="./images/saturn-chair.dae"></a-asset-item>
+            <a-asset-item id="chair" src="./images/chair2.dae"></a-asset-item>
             <!--textures-->
             <img id="floorTexture" src="./images/seamlessWood.jpg">
             <img id="wallTexture" src="./images/wall1.jpg">
@@ -85,26 +85,40 @@
 
         <!--sliding doors-->
             <!--front doors-->
-        <a-box id="flDoor" position="-1.1 2.2 -15.06" color="#125749" opacity="0.988" depth=".06" height="6.75" width="2.22"><a-animation begin="click" easing="ease-in-out" attribute="position" fill="backwards" from="-1.1 2.2 -15.06" to="-3.32 2.2 -15.06" repeat="1" direction="alternate" dur="2000"></a-animation></a-box>
-        <a-box id="frDoor" position="1.1 2.2 -15.06" color="#125749" opacity="0.988" depth=".06" height="6.75" width="2.22"><a-animation begin="click" easing="ease-in-out" attribute="position" fill="backwards" from="1.1 2.2 -15.06" to="3.32 2.2 -15.06" repeat="1" direction="alternate" dur="2000"></a-animation></a-box>
+        <a-box id="flDoor" position="-1.1 2.2 -15.06" color="#125749" opacity="0.988" depth=".06" height="6.75" width="2.22">
+            <a-animation begin="backDoors" easing="ease-in-out" attribute="position" fill="backwards" from="-1.1 2.2 -15.06" to="-3.32 2.2 -15.06" repeat="1" direction="alternate" dur="2000"></a-animation>
+        </a-box>
+        <a-box id="frDoor" position="1.1 2.2 -15.06" color="#125749" opacity="0.988" depth=".06" height="6.75" width="2.22"><a-animation begin="backDoors" easing="ease-in-out" attribute="position" fill="backwards" from="1.1 2.2 -15.06" to="3.32 2.2 -15.06" repeat="1" direction="alternate" dur="2000"></a-animation></a-box>
             <!--back doors-->
-        <a-box id="blDoor" position="-1.1 1.75 -19.59" color="#125749" opacity="0.988" depth=".06" height="5.8" width="2.22"><a-animation begin="click" easing="ease-in-out" attribute="position" fill="backwards" from="-1.1 1.75 -19.59" to="-3.32 1.75 -19.59" repeat="1" direction="alternate" dur="2000"></a-animation></a-box>
-        <a-box id="brDoor" position="1.1 1.75 -19.59" color="#125749" opacity="0.988" depth=".06" height="5.8" width="2.22"><a-animation begin="click" easing="ease-in-out" attribute="position" fill="backwards" from="1.1 1.75 -19.59" to="3.32 1.75 -19.59" repeat="1" direction="alternate" dur="2000"></a-animation></a-box>
+        <a-box id="blDoor" position="-1.1 1.75 -19.59" color="#125749" opacity="0.988" depth=".06" height="5.8" width="2.22"><a-animation begin="backDoors" easing="ease-in-out" attribute="position" fill="backwards" from="-1.1 1.75 -19.59" to="-3.32 1.75 -19.59" repeat="1" direction="alternate" dur="2000"></a-animation></a-box>
+        <a-box id="brDoor" position="1.1 1.75 -19.59" color="#125749" opacity="0.988" depth=".06" height="5.8" width="2.22"><a-animation begin="backDoors" easing="ease-in-out" attribute="position" fill="backwards" from="1.1 1.75 -19.59" to="3.32 1.75 -19.59" repeat="1" direction="alternate" dur="2000"></a-animation></a-box>
 
 
         <!--elevator controlls-->
-            <!--panel-->
-        <a-box position="2.7 1.8 -19.375" material="src:#metal; repeat: 0.5 0.5; side: both; shader: flat" opacity="1" depth=".225" height="1.3" width="1"></a-box>
+            <!--LEFTpanel-->
+        <a-box position="2.7 2.3 -19.375" material="src:#metal; repeat: 0.5 0.5; side: both; shader: flat" opacity="1" depth=".225" height="2.3" width="1.25"></a-box>
             <!--buttons-->
                 <!--TOP LEFT-->
-        <a-entity id="rembrandt" ng-click="getGallery('rembrandt')" geometry="primitive: cylinder; height: .12; radius: .12" position="2.5 2.05 -19.2" material="side: double; color:#0E4D3A" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15"><a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="2.5 2.05 -19.2" to="2.5 2.05 -19.30" repeat="1" direction="alternate" dur="99"></a-animation></a-entity>
+        <a-entity id="rembrandt" ng-click="getGallery('rembrandt')" geometry="primitive: cylinder; height: .12; radius: .12" position="2.93 3.05 -19.2" material="side: double; color:#0E4D3A" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15"><a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="2.5 2.05 -19.2" to="2.5 2.05 -19.30" repeat="1" direction="alternate" dur="99"></a-animation></a-entity>
                 <!--TOP RIGHT-->
-        <a-entity id="vanGoh" ng-click="getGallery('vanGogh')" geometry="primitive: cylinder; height: .12; radius: .12" position="2.93 2.05 -19.2" material="side: double; color:#0E4D3A" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15"><a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="2.93 2.05 -19.2" to="2.93 2.05 -19.30" repeat="1" direction="alternate" dur="99"></a-animation></a-entity>
+        <a-entity id="vanGoh" ng-click="getGallery('vanGogh')" geometry="primitive: cylinder; height: .12; radius: .12" position="2.93 2.55 -19.2" material="side: double; color:#0E4D3A" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15"><a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="2.93 2.05 -19.2" to="2.93 2.05 -19.30" repeat="1" direction="alternate" dur="99"></a-animation></a-entity>
                 <!--LOW LEFT-->
-        <a-entity id="vermeer" ng-click="getGallery('vermeer')" geometry="primitive: cylinder; height: .12; radius: .12" position="2.5 1.55 -19.2" material="side: double; color:#0E4D3A" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15"><a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="2.5 1.55 -19.2" to="2.5 1.55 -19.30" repeat="1" direction="alternate" dur="99"></a-animation></a-entity>
+        <a-entity id="vermeer" ng-click="getGallery('vermeer')" geometry="primitive: cylinder; height: .12; radius: .12" position="2.93 2.05 -19.2" material="side: double; color:#0E4D3A" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15"><a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="2.5 1.55 -19.2" to="2.5 1.55 -19.30" repeat="1" direction="alternate" dur="99"></a-animation></a-entity>
                 <!--LOW RIGHT-->
         <a-entity id="paper" ng-click="getGallery('paper')" geometry="primitive: cylinder; height: .12; radius: .12" position="2.93 1.55 -19.2" material="side: double; color:darkred" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15"><a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="2.93 1.55 -19.2" to="2.93 1.55 -19.30" repeat="1" direction="alternate" dur="99"></a-animation></a-entity>
         
+        <!--rpanel-->
+        <a-box position="-2.7 2.3 -19.375" material="src:#metal; repeat: 0.5 0.5; side: both; shader: flat" opacity="1" depth=".225" height="2.3" width="1.25"></a-box>
+            <!--buttons-->
+                <!--TOP LEFT-->
+        <a-entity id="rembrandt" ng-click="getGallery('rembrandt')" geometry="primitive: cylinder; height: .12; radius: .12" position="-2.93 3.05 -19.2" material="side: double; color:#0E4D3A" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15"><a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="-2.5 2.05 -19.2" to="-2.5 2.05 -19.30" repeat="1" direction="alternate" dur="99"></a-animation></a-entity>
+                <!--TOP RIGHT-->
+        <a-entity id="vanGoh" ng-click="getGallery('vanGogh')" geometry="primitive: cylinder; height: .12; radius: .12" position="-2.93 2.55 -19.2" material="side: double; color:#0E4D3A" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15"><a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="-2.93 2.05 -19.2" to="-2.93 2.05 -19.30" repeat="1" direction="alternate" dur="99"></a-animation></a-entity>
+                <!--LOW LEFT-->
+        <a-entity id="vermeer" ng-click="getGallery('vermeer')" geometry="primitive: cylinder; height: .12; radius: .12" position="-2.93 2.05 -19.2" material="side: double; color:#0E4D3A" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15"><a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="-2.5 1.55 -19.2" to="-2.5 1.55 -19.30" repeat="1" direction="alternate" dur="99"></a-animation></a-entity>
+                <!--LOW RIGHT-->
+        <a-entity id="paper" ng-click="getGallery('paper')" geometry="primitive: cylinder; height: .12; radius: .12" position="-2.93 1.55 -19.2" material="side: double; color:darkred" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15"><a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="-2.93 1.55 -19.2" to="-2.93 1.55 -19.30" repeat="1" direction="alternate" dur="99"></a-animation></a-entity>
+
         <!--main gallery-->
             <!--floor-->
         <a-box material="src:#floorTexture; repeat: 2.5 6.5; shader: flat" position="0 -1 -39.5" opacity="1" depth="40" height=".01" width="35"></a-box>
@@ -172,7 +186,7 @@
         <a-entity collada-model="#tree" position="0 8.9 -21" rotation="25 180 0"></a-entity>
 
         <!--furniture-->
-        <a-entity collada-model="#saturn" position="5 -.6 -24" scale=".1 .1 .1"></a-entity>
+        <!--<a-entity collada-model="#chair" position="5 -.6 -24" scale=".1 .1 .1"></a-entity>-->
         
 
 

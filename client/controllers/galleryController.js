@@ -6,7 +6,6 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
     var galleryPrefix = 'https://www.rijksmuseum.nl/api/pages/en/rijksstudio/';
     var keyJson = '?key=xvBxNCX5&format=json&imgonly=true';
     $scope.tester = function(){
-        console.log("oadsvilnsdvndsvklladsvnkladsvnknsdvklldsvnk");
     }
     $scope.theGallery = {
         'splash':'https://i.kinja-img.com/gawker-media/image/upload/s--_WYd3ZqT--/18j4qz58pmh9ujpg.jpg',
@@ -151,14 +150,14 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
         }
         var pageData = '&p='+page+'&ps=16'
         var queryURL = galleryPrefix + galleryIndex[galleryName] + keyJson + pageData;
-        console.log("Query = " + queryURL);
+        // console.log("Query = " + queryURL);
         $http({
             method: 'GET',
             url: queryURL
         }).then(function successCallback(jsonData) {
             // this callback will be called asynchronously
             // when the response is available
-            console.log("JSON = " + JSON.stringify(jsonData));
+            // console.log("JSON = " + JSON.stringify(jsonData));
             //Takes JSON data and converts it into a gallery object
             var newGallery = {}
             newGallery.artList = jsonData.data.contentPage.artObjectSet;
@@ -174,13 +173,13 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
                         }else{
                             newGallery.artList[i] = newCanvas;
                         }
-                        console.log("Image " + (i+1) + ": "+ JSON.stringify(newGallery.artList[i]));
+                        // console.log("Image " + (i+1) + ": "+ JSON.stringify(newGallery.artList[i]));
                     });
                 }(i)
 
 
             }
-            console.log("TEH BROWSER SEEED THE DATAS AZZZZ ***************************************" + JSON.stringify(newGallery))
+            // console.log("TEH BROWSER SEEED THE DATAS AZZZZ ***************************************" + JSON.stringify(newGallery))
             $scope.theGallery = newGallery;
             return newGallery;
         }, function errorCallback(response) {

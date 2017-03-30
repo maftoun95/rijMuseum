@@ -31,14 +31,18 @@ mainDoor.addEventListener('click', function(){
     console.log('yay main button')
 })
 rembrandt.addEventListener('click', function(){
-    // controllaaaaaaa.getGallery("rembrandt")
+    console.log('rembrandt button clicked')
+    document.querySelector('#rembrandt').emit('backDoors');
 })
 vanGoh.addEventListener('click', function(){
+    document.querySelector('#vanGoh').emit('backDoors');
     console.log('fire controller call to API: vanGoh')
 })
 vermeer.addEventListener('click', function(){
+    document.querySelector('#vermeer').emit('backDoors');
     console.log('fire controller call to API: vermeer')
 })
 paper.addEventListener('click', function(){
+    document.querySelector('#paper').emit('backDoors');
     console.log('fire controller call to API: paper')
 })
