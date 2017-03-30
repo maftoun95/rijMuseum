@@ -166,37 +166,52 @@
 
         <!--canvases-->
         <a-box id="1" position="-10 3 -19.69" material="shader: flat; src:{{theGallery.artList[0].url}}" opacity="1" depth=".04" height="{{theGallery.artList[0].height}}" width="{{theGallery.artList[0].width}}"></a-box>
+        <a-entity class="canvasLabel" rotation="0 -180 0" position="-10 3-{{theGallery.artList[0].height}}*0.5 -19.72" text="value: {{theGallery.artList[0].maker}}; height:2 width:3; align: center;"></a-entity>
 
         <a-box id="2" position="-17.5 3 -27.5" material="shader: flat; src:{{theGallery.artList[1].url}}" opacity="1" depth="{{theGallery.artList[1].width}}" height="{{theGallery.artList[1].height}}" width="0.04"></a-box>
+        <a-entity class="canvasLabel" rotation="0 90 0" position="-17.45 3-{{theGallery.artList[1].height}}*0.5 -27.5" text="value: {{theGallery.artList[1].maker}}; height:2 width:3; align: center;"></a-entity>
 
         <a-box id="3" position="-17.5 3 -38.75" material="shader: flat; src:{{theGallery.artList[2].url}}" opacity="1" depth="{{theGallery.artList[2].width}}" height="{{theGallery.artList[2].height}}" width="0.04"></a-box>
+        <a-entity class="canvasLabel" rotation="0 90 0" position="-17.45 3-{{theGallery.artList[2].height}}*0.5 -38.75" text="value: {{theGallery.artList[2].maker}}; height:2 width:3; align: center;"></a-entity>
 
         <a-box id="4" position="-11.5 3 -46.8" material="shader: flat; src:{{theGallery.artList[3].url}}" opacity="1" depth=".04" height="{{theGallery.artList[3].height}}" width="{{theGallery.artList[3].width}}"></a-box>
+        <a-entity class="canvasLabel" rotation="0 0 0" position="-11.5 3-{{theGallery.artList[3].height}}*0.5 -46.75" text="value: {{theGallery.artList[3].maker}}; height:2 width:3; align: center;"></a-entity>
 
         <a-box id="5" position="-11.5 3 -47.2" material="shader: flat; src:{{theGallery.artList[4].url}}" opacity="1" depth=".04" height="{{theGallery.artList[4].height}}" width="{{theGallery.artList[4].width}}"></a-box>
+        <a-entity class="canvasLabel" rotation="0 90 0" position="-11.5 3-{{theGallery.artList[4].height}}*0.5 -47.25" text="value: {{theGallery.artList[4].maker}}; height:2 width:3; align: center;"></a-entity>
 
         <a-box id="6" position="-17.5 3 -53.2" material="shader: flat; src:{{theGallery.artList[5].url}}" opacity="1" depth="{{theGallery.artList[5].width}}" height="{{theGallery.artList[5].height}}" width="0.04"></a-box>
+        <a-entity class="canvasLabel" rotation="0 90 0" position="-17.45 3-{{theGallery.artList[5].height}}*0.5 -53.2" text="value: {{theGallery.artList[5].maker}}; height:2 width:3; align: center;"></a-entity>
 
         <a-box id="7" position="-10 3 -59.4" material="shader: flat; src:{{theGallery.artList[6].url}}" opacity="1" depth=".04" height="{{theGallery.artList[6].height}}" width="{{theGallery.artList[6].width}}"></a-box>
+        <a-entity class="canvasLabel" rotation="0 90 0" position="-10 3-{{theGallery.artList[6].height}}*0.5 -59.4" text="value: {{theGallery.artList[6].maker}}; height:2 width:3; align: center;"></a-entity>
 
         <a-box id="8" position="0 3 -59.4" material="shader: flat; src:{{theGallery.artList[7].url}}" opacity="1" depth=".04" height="{{theGallery.artList[7].height}}" width="{{theGallery.artList[7].width}}"></a-box>
+        <a-entity class="canvasLabel" rotation="0 90 0" position="0 3-{{theGallery.artList[7].height}}*0.5 -59.4" text="value: {{theGallery.artList[7].maker}}; height:2 width:3; align: center;"></a-entity>
 
         <a-box id="9" position="10 3 -59.4" material="shader: flat; src:{{theGallery.artList[8].url}}" opacity="1" depth=".04" height="{{theGallery.artList[8].height}}" width="{{theGallery.artList[8].width}}"></a-box>
+        <a-entity class="canvasLabel" rotation="0 90 0" position="10 3-{{theGallery.artList[8].height}}*0.5 -59.4" text="value: {{theGallery.artList[8].maker}}; height:2 width:3; align: center;"></a-entity>
 
         <a-box id="10" position="17.5 3 -53.2" material="shader: flat; src:{{theGallery.artList[9].url}}" opacity="1" depth="{{theGallery.artList[9].width}}" height="{{theGallery.artList[9].height}}" width="0.04"></a-box>
+        <a-entity class="canvasLabel" rotation="0 90 0" position="17.5 3-{{theGallery.artList[9].height}}*0.5 -53.2" text="value: {{theGallery.artList[9].maker}}; height:2 width:3; align: center;"></a-entity>
 
-        <a-box id="11" position="11.5 3 -47.2"  material="shader: flat; src:{{theGallery.artList[10].url}}" opacity="1" depth=".04" height="{{theGallery.artList[10].height}}" width="{{theGallery.artList[10].width}}"></a-box>
+        <a-box id="11" position="11.5 3 -47.2" material="shader: flat; src:{{theGallery.artList[10].url}}" opacity="1" depth=".04" height="{{theGallery.artList[10].height}}" width="{{theGallery.artList[10].width}}"></a-box>
+        <a-entity class="canvasLabel" rotation="0 90 0" position="11.5 3-{{theGallery.artList[10].height}}*0.5 -47.25" text="value: {{theGallery.artList[10].maker}}; height:2 width:3; align: center;"></a-entity>
 
         <a-box id="12" position="11.5 3 -46.8" material="shader: flat; src:{{theGallery.artList[11].url}}" opacity="1" depth=".04" height="{{theGallery.artList[11].height}}" width="{{theGallery.artList[11].width}}"></a-box>
+        <a-entity class="canvasLabel" rotation="0 0 0" position="11.5 3-{{theGallery.artList[11].height}}*0.5 -46.75" text="value: {{theGallery.artList[11].maker}}; height:2 width:3; align: center;"></a-entity>
 
         <a-box id="13" position="17.5 3 -38.75" material="shader: flat; src:{{theGallery.artList[12].url}}" opacity="1" depth="{{theGallery.artList[12].width}}" height="{{theGallery.artList[12].height}}" width="0.04"></a-box>
+        <a-entity class="canvasLabel" rotation="0 90 0" position="17.5 3-{{theGallery.artList[12].height}}*0.5 -38.75" text="value: {{theGallery.artList[12].maker}}; height:2 width:3; align: center;"></a-entity>
 
         <a-box id="14" position="17.5 3 -27.5" material="shader: flat; src:{{theGallery.artList[13].url}}" opacity="1" depth="{{theGallery.artList[13].width}}" height="{{theGallery.artList[13].height}}" width="0.04"></a-box>
+        <a-entity class="canvasLabel" rotation="0 90 0" position="17.5 3-{{theGallery.artList[13].height}}*0.5 -27.5" text="value: {{theGallery.artList[13].maker}}; height:2 width:3; align: center;"></a-entity>
 
         <a-box id="15" position="10 3 -19.69" material="shader: flat; src:{{theGallery.artList[14].url}}" opacity="1" depth=".04" height="{{theGallery.artList[14].height}}" width="{{theGallery.artList[14].width}}"></a-box>
+        <a-entity class="canvasLabel" rotation="0 -180 0" position="10 3-{{theGallery.artList[14].height}}*0.5 -19.72" text="value: {{theGallery.artList[14].maker}}; height:2 width:3; align: center;"></a-entity>
 
         <a-box id="16" position="0 3 -33.22" material="shader: flat; src:{{theGallery.artList[15].url}}" opacity="1" depth=".04" height="{{theGallery.artList[15].height}}" width="{{theGallery.artList[15].width}}"></a-box>
-
+        <a-entity class="canvasLabel" rotation="0 -180 0" position="0 3-{{theGallery.artList[15].height}}*0.5 -33.22" text="value: {{theGallery.artList[15].maker}}; height:2 width:3; align: center;"></a-entity>
 
         <!--tie fighter for reasons-->
         <a-entity collada-model="#tree" position="0 8.9 -21" rotation="25 180 0"></a-entity>

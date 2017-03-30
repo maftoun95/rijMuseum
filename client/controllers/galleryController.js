@@ -178,7 +178,7 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
 
             }
             // console.log("TEH BROWSER SEEED THE DATAS AZZZZ ***************************************" + JSON.stringify(newGallery))
-            console.log(JSON.stringify(newGallery));
+            console.log(JSON.stringify(newGallery, undefined, 2));
             $scope.theGallery = newGallery;
             return newGallery;
         }, function errorCallback(response) {
