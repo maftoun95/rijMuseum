@@ -5,11 +5,38 @@ On Load use a function to populate the canvas variables.
 
 API Syntax
 
+Galleries
+Birds:
+https://www.rijksmuseum.nl/en/rijksstudio/subjects/birds
+
+Food: (non standard):
+https://www.rijksmuseum.nl/en/rijksstudio/118550--annamarie-kok/collections/glorious-food?ii=23&p=0
+
+Animals:
+https://www.rijksmuseum.nl/en/rijksstudio/220993--amy-lavine/collections/animals?ii=28&p=0
+
+Masterpiece Collection: ***
+https://www.rijksmuseum.nl/en/rijksstudio/works-of-art/masterpieces
 
 
+Classissim:
+https://www.rijksmuseum.nl/en/rijksstudio/styles/classicism
 
+Rococo:
+https://www.rijksmuseum.nl/en/rijksstudio/styles/rococo
 
-Rembrant's artist page
-https://www.rijksmuseum.nl/en/rijksstudio/artists/rembrandt-harmensz-van-rijn
-API call for said page:
-https://www.rijksmuseum.nl/api/pages/en/rijksstudio/artists/rembrandt-harmensz-van-rijn?key=xvBxNCX5&format=json
+Italianates:
+https://www.rijksmuseum.nl/en/rijksstudio/styles/italianates
+
+Baroque:
+https://www.rijksmuseum.nl/en/rijksstudio/styles/baroque
+
+Mannerism:
+https://www.rijksmuseum.nl/en/rijksstudio/styles/mannerism
+
+Renaissance:
+https://www.rijksmuseum.nl/en/rijksstudio/styles/renaissance
+
+Gothic:
+https://www.rijksmuseum.nl/en/rijksstudio/styles/gothic
+
