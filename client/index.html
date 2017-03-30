@@ -19,9 +19,25 @@
     <!--<div>{{theGallery}}</div>-->
     <a-scene>
         
+        <!--camera-->
+        <a-camera position="0 1.5 -9.25" rotation="0 90 0"><a-cursor color="#610026"></a-cursor></a-camera>
 
-        <!--camera-->    
-        <a-camera position="0 1.5 -20.5"><a-cursor color="#610026"></a-cursor></a-camera>
+        <!--Gallery Text-->
+        <!--Entry Intro Text-->
+        <a-entity text="height: 5.42; opacity: 1; value: Welcome to Gallery Wolfenstein!; width: 9.94; zOffset: 0" rotation="0 90 0" position="-4.59 4.83 -11.62"></a-entity>
+        <a-entity text="height: 5.42; opacity: 1; value: For mouse and keyboard, \n click and drag to look around; align: center; width: 9.94; zOffset: 0" rotation="0 90 0" position="-4.59 2.83 -10.07"></a-entity>
+        <a-entity text="height: 3.04; opacity: 1; value: Press button to enter; width: 2.6; zOffset: 0" position="3.42 2.31 -14.47"></a-entity>
+        <!--Button Labels-->
+        <a-entity text="align:center;color:#ffffff;height:2.94;opacity:1;value:Masterpiece Collection;width:1.98;zOffset:0" position="2.23 2.64 -19.02"></a-entity>
+        <a-entity text="align:center;color:#ffffff;height:2.94;opacity:1;value:Gothic (1150 - 1500);width:1.98;zOffset:0" position="2.23 2.64 -19.02"></a-entity>
+        <a-entity text="align:center;color:#ffffff;height:2.94;opacity:1;value:Renaissance (1400 - 1600);width:1.98;zOffset:0" position="2.23 2.64 -19.02"></a-entity>
+        <a-entity text="align:center;color:#ffffff;height:2.94;opacity:1;value:Mannerism (~1520);width:1.98;zOffset:0" position="2.23 2.64 -19.02"></a-entity>
+        <a-entity text="align:center;color:#ffffff;height:2.94;opacity:1;value:Baroque (1600 - 1750);width:1.98;zOffset:0" position="2.23 2.64 -19.02"></a-entity>
+        <a-entity text="align:center;color:#ffffff;height:2.94;opacity:1;value:Rococo (1723 - 1774);width:1.98;zOffset:0" position="2.23 2.64 -19.02"></a-entity>
+        <a-entity text="align:center;color:#ffffff;height:2.94;opacity:1;value:Classicism (1650 - 1720);width:1.98;zOffset:0" position="2.23 2.64 -19.02"></a-entity>
+        <a-entity text="align:center;color:#ffffff;height:2.94;opacity:1;value:Italianates (1623 - );width:1.98;zOffset:0" position="2.23 2.64 -19.02"></a-entity>
+        <!--Front Wall Text-->
+        <a-entity id="galleryText" text="value: {{theGallery.text}}; anchor: left; baseline: top; height: 8.84; opacity: 1; width: 10.559999999999999; wrapCount: 69.48; zOffset: 0" position="-5.59 7.30 -32.82"></a-entity>
 
         <!--texture asset-->
         <a-assets>
@@ -95,7 +111,7 @@
 
 
         <!--elevator controlls-->
-            <!--LEFTpanel-->
+            <!--rightpanel-->
         <a-box position="2.7 2.3 -19.375" material="src:#metal; repeat: 0.5 0.5; side: both; shader: flat" opacity="1" depth=".225" height="2.3" width="1.25"></a-box>
             <!--buttons-->
                 <!--TOP LEFT-->
@@ -105,9 +121,9 @@
                 <!--LOW LEFT-->
         <a-entity id="vermeer" ng-click="getGallery('vermeer')" geometry="primitive: cylinder; height: .12; radius: .12" position="2.93 2.05 -19.2" material="side: double; color:#0E4D3A" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15"><a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="2.5 1.55 -19.2" to="2.5 1.55 -19.30" repeat="1" direction="alternate" dur="99"></a-animation></a-entity>
                 <!--LOW RIGHT-->
-        <a-entity id="paper" ng-click="getGallery('paper')" geometry="primitive: cylinder; height: .12; radius: .12" position="2.93 1.55 -19.2" material="side: double; color:darkred" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15"><a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="2.93 1.55 -19.2" to="2.93 1.55 -19.30" repeat="1" direction="alternate" dur="99"></a-animation></a-entity>
+        <a-entity id="paper" class="button" ng-click="getGallery('paper')" geometry="primitive: cylinder; height: .12; radius: .12" position="2.93 1.55 -19.2" material="side: double; color:darkred" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15"><a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="2.93 1.55 -19.2" to="2.93 1.55 -19.30" repeat="1" direction="alternate" dur="99"></a-animation></a-entity>
         
-        <!--rpanel-->
+        <!--leftpanel-->
         <a-box position="-2.7 2.3 -19.375" material="src:#metal; repeat: 0.5 0.5; side: both; shader: flat" opacity="1" depth=".225" height="2.3" width="1.25"></a-box>
             <!--buttons-->
                 <!--TOP LEFT-->

@@ -19,11 +19,11 @@ rijMuse.factory('canvasFactory', [
                 newCanvas.id = jsonData.data.artObject.id;
                 // Dimension data should be in cm. If you have trouble rendering, check dimensions[i].unit.
                 if(jsonData.data.artObject.webImage != null){
-                    newCanvas.height = jsonData.data.artObject.webImage.height/1000;
-                    newCanvas.width =jsonData.data.artObject.webImage.width/1000;
+                    newCanvas.height = jsonData.data.artObject.webImage.height/600;
+                    newCanvas.width =jsonData.data.artObject.webImage.width/600;
                 }else{
-                    newCanvas.height = jsonData.data.artObject.dimensions[0].value/1000;
-                    newCanvas.width =jsonData.data.artObject.dimensions[1].value/1000;
+                    newCanvas.height = jsonData.data.artObject.dimensions[0].value/600;
+                    newCanvas.width =jsonData.data.artObject.dimensions[1].value/600;
                 }
                 
                 newCanvas.url = jsonData.data.artObject.webImage.url;
