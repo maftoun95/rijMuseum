@@ -1,10 +1,10 @@
 // var controllaaaaaaa = require('./controllers/galleryController');
 
-var mainDoor = document.querySelector('#mainDoor');
-var rembrandt = document.querySelector('#rembrandt');
-var vanGoh = document.querySelector('#vanGoh');
-var vermeer = document.querySelector('#vermeer');
-var paper = document.querySelector('#paper');
+var mainDoor = document.getElementById('mainDoor');
+var rembrandt = document.getElementById('rembrandt');
+var vanGoh = document.getElementById('vanGoh');
+var vermeer = document.getElementById('vermeer');
+var paper = document.getElementById('paper');
 console.log("~~~~~~~~~~~~~~~~~",rembrandt)
 var c1 = document.getElementById('1');
 var c2 = document.getElementById('2');
@@ -32,13 +32,8 @@ mainDoor.addEventListener('click', function(){
     doorAnimation.play()
 })
 rembrandt.addEventListener('click', function(){
-<<<<<<< HEAD
     console.log('rembrandt button clicked')
     document.querySelector('#rembrandt').emit('backDoors');
-=======
- 
-    // controllaaaaaaa.getGallery("rembrandt")
->>>>>>> 18583b951af6c1b73b8714fe49b9b2266407fbe6
 })
 vanGoh.addEventListener('click', function(){
     document.querySelector('#vanGoh').emit('backDoors');
