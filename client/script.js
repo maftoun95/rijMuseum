@@ -1,4 +1,4 @@
-var controllaaaaaaa = require('./controllers/galleryController');
+// var controllaaaaaaa = require('./controllers/galleryController');
 
 var mainDoor = document.querySelector('#mainDoor');
 var rembrandt = document.querySelector('#rembrandt');
@@ -31,7 +31,7 @@ mainDoor.addEventListener('click', function(){
     console.log('yay main button')
 })
 rembrandt.addEventListener('click', function(){
-    controllaaaaaaa.getGallery("rembrandt")
+    // controllaaaaaaa.getGallery("rembrandt")
 })
 vanGoh.addEventListener('click', function(){
     console.log('fire controller call to API: vanGoh')

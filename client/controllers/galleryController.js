@@ -1,9 +1,13 @@
 // var rijMuse = angular.module('rijMuse');
 
 rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory', '$scope', function($http, $routeParams, canvasFactory, $scope){
+
     console.log("In galleryController")
     var galleryPrefix = 'https://www.rijksmuseum.nl/api/pages/en/'
     var keyJson = '?key=xvBxNCX5&format=json&imgonly=true';
+    $scope.tester = function(){
+        console.log("oadsvilnsdvndsvklladsvnkladsvnknsdvklldsvnk");
+    }
     $scope.theGallery = {
         'splash':'https://i.kinja-img.com/gawker-media/image/upload/s--_WYd3ZqT--/18j4qz58pmh9ujpg.jpg',
         'text':'Hey look. an easter egg. I guess that makes this spring themed!! ',
@@ -133,7 +137,7 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
     }
 
 
-    var getGallery = function(galleryName, page = 1){
+    $scope.getGallery = function(galleryName, page = 1){
         if(galleryName === 'undefined'){
             galleryName = 'vermeer';
         }
