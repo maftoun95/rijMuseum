@@ -32,13 +32,8 @@ mainDoor.addEventListener('click', function(){
     doorAnimation.play()
 })
 rembrandt.addEventListener('click', function(){
-<<<<<<< HEAD
     console.log('rembrandt button clicked')
     document.querySelector('#rembrandt').emit('backDoors');
-=======
- 
-    // controllaaaaaaa.getGallery("rembrandt")
->>>>>>> 18583b951af6c1b73b8714fe49b9b2266407fbe6
 })
 vanGoh.addEventListener('click', function(){
     document.querySelector('#vanGoh').emit('backDoors');

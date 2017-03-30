@@ -5,11 +5,6 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
     console.log("In galleryController")
     var galleryPrefix = 'https://www.rijksmuseum.nl/api/pages/en/rijksstudio/';
     var keyJson = '?key=xvBxNCX5&format=json&imgonly=true';
-<<<<<<< HEAD
-    $scope.tester = function(){
-    }
-=======
->>>>>>> 18583b951af6c1b73b8714fe49b9b2266407fbe6
     $scope.theGallery = {
         'splash':'https://i.kinja-img.com/gawker-media/image/upload/s--_WYd3ZqT--/18j4qz58pmh9ujpg.jpg',
         'text':'Hey look. an easter egg. I guess that makes this spring themed!! ',
@@ -183,10 +178,7 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
 
             }
             // console.log("TEH BROWSER SEEED THE DATAS AZZZZ ***************************************" + JSON.stringify(newGallery))
-<<<<<<< HEAD
-=======
             console.log(JSON.stringify(newGallery));
->>>>>>> 18583b951af6c1b73b8714fe49b9b2266407fbe6
             $scope.theGallery = newGallery;
             return newGallery;
         }, function errorCallback(response) {
