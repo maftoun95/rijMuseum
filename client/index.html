@@ -103,10 +103,6 @@
             <!--leftpanel-->
         <a-box position="-2.7 2.3 -19.375" material="src:#metal; repeat: 0.5 0.5; side: both; shader: flat" opacity="1" depth=".225" height="2.3" width="1.25"><a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="-2.93 3.05 -19.2" to="-2.93 3.05 -19.30" repeat="1" direction="alternate" dur="99"></a-animation></a-box>
             <!--buttons-->
-                <!--TOP LEFT-->
-        <a-entity id="masterpieces" ng-click="getGallery('masterpieces')" geometry="primitive: cylinder; height: .12; radius: .12" position="-2.93 3.05 -19.2" material="side: double; color:#0E4D3A" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15"><a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="-2.93 3.05 -19.2" to="-2.93 3.05 -19.30" repeat="1" direction="alternate" dur="99"></a-animation></a-entity>
-        <a-entity text="align:right;color:#ffffff;height:2.94;opacity:1;value:Masterpiece Collection;width:1.98;zOffset:0" position="-2.93 3.05 -19.2"></a-entity>
-                <!--TOP RIGHT-->
                 <!--HIGHEST-->
         <a-entity id="masterpieces" ng-click="getGallery('masterpieces')" geometry="primitive: cylinder; height: .12; radius: .12" position="-2.93 3.05 -19.2" material="side: double; color:#0E4D3A" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15"><a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="-2.93 3.05 -19.2" to="-2.93 3.05 -19.30" repeat="1" direction="alternate" dur="99"></a-animation></a-entity>
         <a-entity text="align:right;color:#ffffff;height:2.94;opacity:1;value:Masterpiece Collection;width:1.98;zOffset:0" position="-2.93 3.05 -19.2"></a-entity>
@@ -191,7 +187,7 @@
         <a-entity class="canvasLabel" rotation="0 -90 0" position="17.49 {{theGallery.artList[9].makerHeight}} -53.2" text="value: {{theGallery.artList[9].maker}}; color:#ff0000; height:2; width:3; align: center;"></a-entity>
 
         <a-box id="11" position="11.5 3 -47.2" material="shader: flat; src:{{theGallery.artList[10].url}}" opacity="1" depth=".04" height="{{theGallery.artList[10].height}}" width="{{theGallery.artList[10].width}}"></a-box>
-        <a-entity class="canvasLabel" rotation="0 180 0" position="-11.5 {{theGallery.artList[10].makerHeight}} -47.25" text="value: {{theGallery.artList[10].maker}}; color:#ff0000; height:2; width:3; align: center;"></a-entity>
+        <a-entity class="canvasLabel" rotation="0 180 0" position="11.5 {{theGallery.artList[10].makerHeight}} -47.25" text="value: {{theGallery.artList[10].maker}}; color:#ff0000; height:2; width:3; align: center;"></a-entity>
 
         <a-box id="12" position="11.5 3 -46.8" material="shader: flat; src:{{theGallery.artList[11].url}}" opacity="1" depth=".04" height="{{theGallery.artList[11].height}}" width="{{theGallery.artList[11].width}}"></a-box>
         <a-entity class="canvasLabel" rotation="0 0 0" position="11.5 {{theGallery.artList[11].makerHeight}} -46.75" text="value: {{theGallery.artList[11].maker}}; color:#ff0000; height:2; width:3; align: center;"></a-entity>
