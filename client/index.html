@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Rijksmuseum VR </title>
+    <title>Rijksmuseum VR</title>
     <!--link to a-frame cdn-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.5.0/aframe.js"></script>
     <script src="https://code.angularjs.org/1.6.3/angular.js"></script>
@@ -18,6 +18,9 @@
 <body ng-controller="galleryController">
     <!--<div>{{theGallery}}</div>-->
     <a-scene>
+        <!--light-->
+        <a-entity light="type: ambient; color: #FFF; intensity: 0.6" position="-20.5 100 100"></a-entity>
+
         <!--camera-->
         <a-camera position="0 1.5 -11.5"><a-cursor color="#610026"></a-cursor></a-camera>
 
@@ -82,11 +85,11 @@
 
         <!--sliding doors-->
             <!--front doors-->
-        <a-box id="flDoor" position="-1.1 2.2 -15.06" color="#125749" opacity="1" depth=".06" height="6.75" width="2.22"><a-animation begin="click" easing="ease-in-out" attribute="position" fill="backwards" from="-1.1 2.2 -15.06" to="-3.32 2.2 -15.06" repeat="1" direction="alternate" dur="2000"></a-animation></a-box>
-        <a-box id="frDoor" position="1.1 2.2 -15.06" color="#125749" opacity="1" depth=".06" height="6.75" width="2.22"><a-animation begin="click" easing="ease-in-out" attribute="position" fill="backwards" from="1.1 2.2 -15.06" to="3.32 2.2 -15.06" repeat="1" direction="alternate" dur="2000"></a-animation></a-box>
+        <a-box id="flDoor" position="-1.1 2.2 -15.06" color="#125749" opacity="0.988" depth=".06" height="6.75" width="2.22"><a-animation begin="click" easing="ease-in-out" attribute="position" fill="backwards" from="-1.1 2.2 -15.06" to="-3.32 2.2 -15.06" repeat="1" direction="alternate" dur="2000"></a-animation></a-box>
+        <a-box id="frDoor" position="1.1 2.2 -15.06" color="#125749" opacity="0.988" depth=".06" height="6.75" width="2.22"><a-animation begin="click" easing="ease-in-out" attribute="position" fill="backwards" from="1.1 2.2 -15.06" to="3.32 2.2 -15.06" repeat="1" direction="alternate" dur="2000"></a-animation></a-box>
             <!--back doors-->
-        <a-box id="blDoor" position="-1.1 1.75 -19.59" color="#125749" opacity="1" depth=".06" height="5.8" width="2.22"><a-animation begin="click" easing="ease-in-out" attribute="position" fill="backwards" from="-1.1 1.75 -19.59" to="-3.32 1.75 -19.59" repeat="1" direction="alternate" dur="2000"></a-animation></a-box>
-        <a-box id="brDoor" position="1.1 1.75 -19.59" color="#125749" opacity="1" depth=".06" height="5.8" width="2.22"><a-animation begin="click" easing="ease-in-out" attribute="position" fill="backwards" from="1.1 1.75 -19.59" to="3.32 1.75 -19.59" repeat="1" direction="alternate" dur="2000"></a-animation></a-box>
+        <a-box id="blDoor" position="-1.1 1.75 -19.59" color="#125749" opacity="0.988" depth=".06" height="5.8" width="2.22"><a-animation begin="click" easing="ease-in-out" attribute="position" fill="backwards" from="-1.1 1.75 -19.59" to="-3.32 1.75 -19.59" repeat="1" direction="alternate" dur="2000"></a-animation></a-box>
+        <a-box id="brDoor" position="1.1 1.75 -19.59" color="#125749" opacity="0.988" depth=".06" height="5.8" width="2.22"><a-animation begin="click" easing="ease-in-out" attribute="position" fill="backwards" from="1.1 1.75 -19.59" to="3.32 1.75 -19.59" repeat="1" direction="alternate" dur="2000"></a-animation></a-box>
 
 
         <!--elevator controlls-->
@@ -124,10 +127,10 @@
                 <!--right-->
         <a-box position="11.5 5 -47" opacity="1" depth=".35" height="12" width="12" material="src:#partition; repeat: 2 2; side: both; shader: flat" color="#EEFEFF"></a-box>
                 <!--center-->
-        <a-box position="0 5 -33" opacity="1" depth=".35" height="12" width="12" material="src:#partition; repeat: 2 2; side: both; shader: flat" color="#EEFEFF"></a-box>
+        <a-box position="0 4 -33" opacity="1" depth=".35" height="10" width="12" material="src:#partition; repeat: 2 2; side: both; shader: flat" color="#EEFEFF"></a-box>
                 <!--splash plane-->
             <!--<a-box position="0 5 -32.82" opacity="1" depth=".01" height="12" width="12" material="src:#splash; repeat: 1 1; side: both; shader: flat"></a-box>-->
-        <a-box position="0 5 -32.82" opacity="1" depth=".01" height="12" width="12" material="shader: flat" src="{{theGallery.splash}}"></a-box>
+        <a-box position="0 4 -32.82" opacity="1" depth=".01" height="10" width="12" material="shader: flat" src="{{theGallery.splash}}"></a-box>
             
 
 
