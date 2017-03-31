@@ -1,4 +1,5 @@
 var elButton = document.querySelector('#mainDoor');
+var backButton = document.querySelector('#return');
 var ltButton = document.querySelector('#masterpieces');
 var lmtButton = document.querySelector('#classicism');
 var lmlButton = document.querySelector('#rococo');
@@ -15,9 +16,11 @@ var brDoor = document.querySelector('#brDoor');
 
 // elevator door animations
 elButton.addEventListener('click', function(){
-    elButton.innerHTML = '<a-animation easing="ease-in" attribute="position" fill="backwards" from="2.7 1.75 -14.77" to="2.7 1.75 -14.82" repeat="1" direction="alternate" dur="99"></a-animation>';
-    flDoor.innerHTML = '<a-animation  easing="ease-in-out" attribute="position" fill="backwards" from="-1.1 2.2 -15.06" to="-3.32 2.2 -15.06" repeat="1" direction="alternate" dur="2000"></a-animation>';
-    frDoor.innerHTML = '<a-animation  easing="ease-in-out" attribute="position" fill="backwards" from="1.1 2.2 -15.06" to="3.32 2.2 -15.06" repeat="1" direction="alternate" dur="2000"></a-animation>';
+    elButton.innerHTML = '<a-animation easing="ease-in" attribute="position" fill="backwards" from="2.7 2.75 -14.77" to="2.7 2.75 -14.82" repeat="1" direction="alternate" dur="99"></a-animation>';
+    setTimeout(function() {
+        flDoor.innerHTML = '<a-animation  easing="ease-in-out" attribute="position" fill="backwards" from="-1.1 2.2 -15.06" to="-3.32 2.2 -15.06" repeat="1" direction="alternate" dur="2000"></a-animation>';
+        frDoor.innerHTML = '<a-animation  easing="ease-in-out" attribute="position" fill="backwards" from="1.1 2.2 -15.06" to="3.32 2.2 -15.06" repeat="1" direction="alternate" dur="2000"></a-animation>';
+    }, 666);
 })
 
 
@@ -88,4 +91,10 @@ rlButton.addEventListener('click', function(){
     }, 6000);
 })
 
-console.log(rmtButton)
+backButton.addEventListener('click', function(){
+    backButton.innerHTML = '<a-animation easing="ease-in" attribute="position" fill="backwards" from="-3.1 2.75 -19.87" to="-3.1 2.75 -19.79" repeat="1" direction="alternate" dur="99"></a-animation>';
+    setTimeout(function() {
+        blDoor.innerHTML = '<a-animation easing="ease-in-out" attribute="position" fill="backwards" from="-1.1 1.75 -19.59" to="-3.32 1.75 -19.59" repeat="1" direction="alternate" dur="2000"></a-animation>';
+        brDoor.innerHTML = '<a-animation easing="ease-in-out" attribute="position" fill="backwards" from="1.1 1.75 -19.59" to="3.32 1.75 -19.59" repeat="1" direction="alternate" dur="2000"></a-animation>';
+    }, 666);
+})

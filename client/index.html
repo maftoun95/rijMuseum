@@ -26,7 +26,7 @@
         <!--Entry Intro Text-->
         <a-entity text="height: 5.42; opacity: 1; value: Welcome to Gallery Wolfenstein!; width: 9.94; zOffset: 0" rotation="0 90 0" position="-4.59 4.83 -11.62"></a-entity>
         <a-entity text="height: 5.42; opacity: 1; value: For mouse and keyboard, \n left-click and drag to look around.\nWASD to move.\n\nGo that way!\n--->; align: center; width: 9.94; zOffset: 0" rotation="0 90 0" position="-4.59 2.83 -10.07"></a-entity>
-        <a-entity text="height: 3.04; opacity: 1; value: Press button to enter; width: 2.6; zOffset: 0" position="3.42 2.31 -14.47"></a-entity>
+        <a-entity text="height: 3.04; opacity: 1; value: Press button to enter; width: 2.6; zOffset: 0" position="3.42 3.31 -14.47"></a-entity>
     <!--Front Wall Text-->
         <a-entity id="galleryText" text="value: {{theGallery.text}}; anchor: center; baseline: center; height: 8.84; opacity: 1; width: 10.559999999999999; wrapCount: 69.48; zOffset: 0" position="0 4 -32.82"></a-entity>
 
@@ -42,6 +42,7 @@
             <img id="metal" src="./images/metal.jpg">
             <img id="floor" src="./images/carpet.jpg">
             <img id="ceiling" src="./images/ornateCeiling2.jpg">
+            <img id="entrance" src="./images/blueTiles2.jpg">
             
             <img id="splash" src="{{theGallery.splash}}">
             
@@ -53,7 +54,7 @@
 
         <!--base entrance hallway-->
             <!--floor-->
-        <a-box position="0 -1 -10" color="#BABDCE" opacity="1" depth="10" height=".01" width="10"></a-box>
+        <a-box position="0 -1 -10" color="#BABDCE" opacity="1" depth="10" height=".01" width="10" material="src:#entrance; repeat: 4 4; side: both; shader: flat"></a-box>
             <!--ceiling-->
         <a-box position="0 9 -10" color="#1F2130" opacity="1" depth="10" height=".01" width="10"></a-box>
             <!--walls-->
@@ -68,9 +69,9 @@
 
         <!--call elevator-->
             <!--panel-->
-        <a-box position="2.7 1.5 -14.89" opacity="1" depth=".175" height="1.3" width="1" material="src:#metal; repeat: 0.5 0.5; side: both; shader: flat"></a-box>
+        <a-box position="2.7 2.5 -14.89" opacity="1" depth=".175" height="1.3" width="1" material="src:#metal; repeat: 0.5 0.5; side: both; shader: flat"></a-box>
             <!--call button-->
-        <a-entity id="mainDoor" geometry="primitive: cylinder; height: .12; radius: .12" material="side: double; color:#0E4D3A" rotation="0 90 90"  position="2.7 1.75 -14.77">
+        <a-entity id="mainDoor" geometry="primitive: cylinder; height: .12; radius: .12" material="side: double; color:#0E4D3A" rotation="0 90 90"  position="2.7 2.75 -14.77">
             
         </a-entity>
 
@@ -126,7 +127,7 @@
         </a-entity>
         <a-entity text="align:center;color:#ffffff;height:2.94;opacity:1;value:Rococo (1723 - 1774);width:1.98;zOffset:0" position="-2.7 2.35 -19.2"></a-entity>
                 <!--LOWEST-->
-        <a-entity class="bButton" id="italianates" ng-click="getGallery('italianates')" geometry="primitive: cylinder; height: .12; radius: .12" position="-2.7 1.55 -19.2" material="side: double; color:darkred" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15">
+        <a-entity class="bButton" id="italianates" ng-click="getGallery('italianates')" geometry="primitive: cylinder; height: .12; radius: .12" position="-2.7 1.55 -19.2" material="side: double; color:#0E4D3A" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15">
             
         </a-entity>
         <a-entity text="align:center;color:#ffffff;height:2.94;opacity:1;value:Italianates (1623 - );width:1.98;zOffset:0" position="-2.7 1.75 -19.2"></a-entity>
@@ -150,7 +151,7 @@
         </a-entity>
         <a-entity text="align:center;color:#ffffff;height:2.94;opacity:1;value:Mannerism (~1520);width:1.98;zOffset:0" position="2.7 2.3 -19.2"></a-entity>                
                 <!--LOWEST-->
-        <a-entity class="bButton" id="renaissance" class="button" ng-click="getGallery('renaissance')" geometry="primitive: cylinder; height: .12; radius: .12" position="2.7 1.55 -19.2" material="side: double; color:darkred" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15">
+        <a-entity class="bButton" id="renaissance" class="button" ng-click="getGallery('renaissance')" geometry="primitive: cylinder; height: .12; radius: .12" position="2.7 1.55 -19.2" material="side: double; color:#0E4D3A" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15">
             
         </a-entity>
         <a-entity text="align:center;color:#ffffff;height:2.94;opacity:1;value:Renaissance (1400 - 1600);width:1.98;zOffset:0" position="2.7 1.8 -19.2"></a-entity>
@@ -257,6 +258,11 @@
         <!--<a-entity collada-model="#chair" position="5 -.6 -24" scale=".1 .1 .1"></a-entity>-->
         
 
+        <!--return to elevator-->
+        <a-box position="-3.1 2.5 -19.75" depth=".175" height="1.3" width="1" material="src:#metal; repeat: 0.5 0.5; side: both; shader: flat"></a-box>
+        <a-entity id="return" geometry="primitive: cylinder; height: .12; radius: .12" material="side: double; color:#0E4D3A" rotation="0 90 90"  position="-3.1 2.75 -19.87">
+
+        </a-entity>
 
             <!--environment-->
         <a-sky color="#FF704E"></a-sky>
