@@ -26,19 +26,10 @@
         <!--Gallery Text-->
         <!--Entry Intro Text-->
         <a-entity text="height: 5.42; opacity: 1; value: Welcome to Gallery Wolfenstein!; width: 9.94; zOffset: 0" rotation="0 90 0" position="-4.59 4.83 -11.62"></a-entity>
-        <a-entity text="height: 5.42; opacity: 1; value: For mouse and keyboard, \n click and drag to look around; align: center; width: 9.94; zOffset: 0" rotation="0 90 0" position="-4.59 2.83 -10.07"></a-entity>
+        <a-entity text="height: 5.42; opacity: 1; value: For mouse and keyboard, \n left-click and drag to look around.\nWASD to move.\n\nGo that way!\n--->; align: center; width: 9.94; zOffset: 0" rotation="0 90 0" position="-4.59 2.83 -10.07"></a-entity>
         <a-entity text="height: 3.04; opacity: 1; value: Press button to enter; width: 2.6; zOffset: 0" position="3.42 2.31 -14.47"></a-entity>
-        <!--Button Labels-->
-        <a-entity text="align:center;color:#ffffff;height:2.94;opacity:1;value:Masterpiece Collection;width:1.98;zOffset:0" position="2.23 2.64 -19.02"></a-entity>
-        <a-entity text="align:center;color:#ffffff;height:2.94;opacity:1;value:Gothic (1150 - 1500);width:1.98;zOffset:0" position="2.23 2.64 -19.02"></a-entity>
-        <a-entity text="align:center;color:#ffffff;height:2.94;opacity:1;value:Renaissance (1400 - 1600);width:1.98;zOffset:0" position="2.23 2.64 -19.02"></a-entity>
-        <a-entity text="align:center;color:#ffffff;height:2.94;opacity:1;value:Mannerism (~1520);width:1.98;zOffset:0" position="2.23 2.64 -19.02"></a-entity>
-        <a-entity text="align:center;color:#ffffff;height:2.94;opacity:1;value:Baroque (1600 - 1750);width:1.98;zOffset:0" position="2.23 2.64 -19.02"></a-entity>
-        <a-entity text="align:center;color:#ffffff;height:2.94;opacity:1;value:Rococo (1723 - 1774);width:1.98;zOffset:0" position="2.23 2.64 -19.02"></a-entity>
-        <a-entity text="align:center;color:#ffffff;height:2.94;opacity:1;value:Classicism (1650 - 1720);width:1.98;zOffset:0" position="2.23 2.64 -19.02"></a-entity>
-        <a-entity text="align:center;color:#ffffff;height:2.94;opacity:1;value:Italianates (1623 - );width:1.98;zOffset:0" position="2.23 2.64 -19.02"></a-entity>
-        <!--Front Wall Text-->
-        <a-entity id="galleryText" text="value: {{theGallery.text}}; anchor: left; baseline: top; height: 8.84; opacity: 1; width: 10.559999999999999; wrapCount: 69.48; zOffset: 0" position="-5.59 7.30 -32.82"></a-entity>
+    <!--Front Wall Text-->
+        <a-entity id="galleryText" text="value: {{theGallery.text}}; anchor: center; baseline: center; height: 8.84; opacity: 1; width: 10.559999999999999; wrapCount: 69.48; zOffset: 0" position="0 4 -32.82"></a-entity>
 
         <!--texture asset-->
         <a-assets>
@@ -121,44 +112,34 @@
         <a-box position="-2.7 2.3 -19.375" material="src:#metal; repeat: 0.5 0.5; side: both; shader: flat" opacity="1" depth=".225" height="2.3" width="1.25"></a-box>
             <!--buttons-->
                 <!--HIGHEST-->
-        <a-entity class="bButton" id="masterpieces" ng-click="getGallery('masterpieces')" geometry="primitive: cylinder; height: .12; radius: .12" position="-2.93 3.05 -19.2" material="side: double; color:#0E4D3A" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15">
-            <a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="-2.93 3.05 -19.2" to="-2.93 3.05 -19.30" repeat="1" direction="alternate" dur="99">
-
-            </a-animation>
-        </a-entity>
+        <a-entity class="bButton" id="masterpieces" ng-click="getGallery('masterpieces')" geometry="primitive: cylinder; height: .12; radius: .12" position="-2.7 3.05 -19.2" material="side: double; color:#0E4D3A" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15"><a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="-2.7 3.05 -19.2" to="-2.7 3.05 -19.30" repeat="1" direction="alternate" dur="99"></a-animation></a-entity>
+        <a-entity text="align:center; color:#ffffff;height:2.94;opacity:1;value:Masterpiece Collection;width:1.98;zOffset:0" position="-2.7 3.3 -19.2"></a-entity>
                 <!--MID TOP-->
-        <a-entity class="bButton" id="classicism" ng-click="getGallery('classicism')" geometry="primitive: cylinder; height: .12; radius: .12" position="-2.93 2.55 -19.2" material="side: double; color:#0E4D3A" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15">
-            <a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="-2.93 2.55 -19.2" to="-2.93 2.55 -19.30" repeat="1" direction="alternate" dur="99"></a-animation>
-        </a-entity>
+        <a-entity class="bButton" id="classicism" ng-click="getGallery('classicism')" geometry="primitive: cylinder; height: .12; radius: .12" position="-2.7 2.55 -19.2" material="side: double; color:#0E4D3A" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15"><a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="-2.7 2.55 -19.2" to="-2.7 2.55 -19.30" repeat="1" direction="alternate" dur="99"></a-animation></a-entity>
+        <a-entity text="align:center;color:#ffffff;height:2.94;opacity:1;value:Classicism (1650 - 1720);width:1.98;zOffset:0" position="-2.7 2.8 -19.2"></a-entity>
                 <!--MID LOW-->
-        <a-entity class="bButton" id="rococo" ng-click="getGallery('rococo')" geometry="primitive: cylinder; height: .12; radius: .12" position="-2.93 2.05 -19.2" material="side: double; color:#0E4D3A" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15">
-            <a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="-2.93 2.05 -19.2" to="-2.93 2.05 -19.30" repeat="1" direction="alternate" dur="99"></a-animation>
-        </a-entity>
+        <a-entity class="bButton" id="rococo" ng-click="getGallery('rococo')" geometry="primitive: cylinder; height: .12; radius: .12" position="-2.7 2.05 -19.2" material="side: double; color:#0E4D3A" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15"><a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="-2.7 2.05 -19.2" to="-2.7 2.05 -19.30" repeat="1" direction="alternate" dur="99"></a-animation></a-entity>
+        <a-entity text="align:center;color:#ffffff;height:2.94;opacity:1;value:Rococo (1723 - 1774);width:1.98;zOffset:0" position="-2.7 2.35 -19.2"></a-entity>
                 <!--LOWEST-->
-        <a-entity class="bButton" id="italianates" ng-click="getGallery('italianates')" geometry="primitive: cylinder; height: .12; radius: .12" position="-2.93 1.55 -19.2" material="side: double; color:darkred" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15">
-            <a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="-2.93 1.55 -19.2" to="-2.93 1.55 -19.30" repeat="1" direction="alternate" dur="99"></a-animation>
-        </a-entity>
+        <a-entity class="bButton" id="italianates" ng-click="getGallery('italianates')" geometry="primitive: cylinder; height: .12; radius: .12" position="-2.7 1.55 -19.2" material="side: double; color:darkred" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15"><a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="-2.7 1.55 -19.2" to="-2.7 1.55 -19.30" repeat="1" direction="alternate" dur="99"></a-animation></a-entity>
+        <a-entity text="align:center;color:#ffffff;height:2.94;opacity:1;value:Italianates (1623 - );width:1.98;zOffset:0" position="-2.7 1.75 -19.2"></a-entity>
 
             <!--rightpanel-->
         <a-box position="2.7 2.3 -19.375" material="src:#metal; repeat: 0.5 0.5; side: both; shader: flat" opacity="1" depth=".225" height="2.3" width="1.25"></a-box>
             <!--buttons-->
                 <!--HIGHEST-->
-        <a-entity class="bButton" id="rembrandt" ng-click="getGallery('rembrandt')" geometry="primitive: cylinder; height: .12; radius: .12" position="2.93 3.05 -19.2" material="side: double; color:#0E4D3A" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15">
-            <a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="2.93 3.05 -19.2" to="2.93 3.05 -19.30" repeat="1" direction="alternate" dur="99"></a-animation>
-        </a-entity>
+        <a-entity class="bButton" id="rembrandt" ng-click="getGallery('rembrandt')" geometry="primitive: cylinder; height: .12; radius: .12" position="2.7 3.05 -19.2" material="side: double; color:#0E4D3A" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15"><a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="2.7 3.05 -19.2" to="2.7 3.05 -19.30" repeat="1" direction="alternate" dur="99"></a-animation></a-entity>
+        <a-entity text="align:center;color:#ffffff;height:2.94;opacity:1;value:Rembrandt (1606 - 1669);width:1.98;zOffset:0" position="2.7 3.3 -19.2"></a-entity>
                 <!--MID TOP-->
-        <a-entity class="bButton" id="baroque" ng-click="getGallery('baroque')" geometry="primitive: cylinder; height: .12; radius: .12" position="2.93 2.55 -19.2" material="side: double; color:#0E4D3A" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15">
-            <a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="2.93 2.55 -19.2" to="2.93 2.55 -19.30" repeat="1" direction="alternate" dur="99"></a-animation>
-        </a-entity>
+        <a-entity class="bButton" id="baroque" ng-click="getGallery('baroque')" geometry="primitive: cylinder; height: .12; radius: .12" position="2.7 2.55 -19.2" material="side: double; color:#0E4D3A" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15"><a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="2.7 2.55 -19.2" to="2.7 2.55 -19.30" repeat="1" direction="alternate" dur="99"></a-animation></a-entity>
+        <a-entity text="align:center;color:#ffffff;height:2.94;opacity:1;value:Baroque (1600 - 1750);width:1.98;zOffset:0" position="2.7 2.8 -19.2"></a-entity>
                 <!--MID LOW-->
-        <a-entity class="bButton" id="mannerism" ng-click="getGallery('mannerism')" geometry="primitive: cylinder; height: .12; radius: .12" position="2.93 2.05 -19.2" material="side: double; color:#0E4D3A" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15">
-            <a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="2.93 2.05 -19.2" to="2.93 2.05 -19.30" repeat="1" direction="alternate" dur="99"></a-animation>
-        </a-entity>
+        <a-entity class="bButton" id="mannerism" ng-click="getGallery('mannerism')" geometry="primitive: cylinder; height: .12; radius: .12" position="2.7 2.05 -19.2" material="side: double; color:#0E4D3A" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15"><a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="2.7 2.05 -19.2" to="2.7 2.05 -19.30" repeat="1" direction="alternate" dur="99"></a-animation></a-entity>
+        <a-entity text="align:center;color:#ffffff;height:2.94;opacity:1;value:Mannerism (~1520);width:1.98;zOffset:0" position="2.7 2.3 -19.2"></a-entity>                
                 <!--LOWEST-->
-        <a-entity class="bButton" id="renaissance" class="button" ng-click="getGallery('renaissance')" geometry="primitive: cylinder; height: .12; radius: .12" position="2.93 1.55 -19.2" material="side: double; color:darkred" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15">
-            <a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="2.93 1.55 -19.2" to="2.93 1.55 -19.30" repeat="1" direction="alternate" dur="99"></a-animation>
-        </a-entity>
-        
+        <a-entity class="bButton" id="renaissance" class="button" ng-click="getGallery('renaissance')" geometry="primitive: cylinder; height: .12; radius: .12" position="2.7 1.55 -19.2" material="side: double; color:darkred" rotation="0 90 90" opacity="1" depth=".11" height=".15" width=".15"><a-animation begin="click" easing="ease-in" attribute="position" fill="backwards" from="2.7 1.55 -19.2" to="2.7 1.55 -19.30" repeat="1" direction="alternate" dur="99"></a-animation></a-entity>
+        <a-entity text="align:center;color:#ffffff;height:2.94;opacity:1;value:Renaissance (1400 - 1600);width:1.98;zOffset:0" position="2.7 1.8 -19.2"></a-entity>
+
         <!--main gallery-->
             <!--floor-->
         <a-box material="src:#floorTexture; repeat: 2.5 6.5; shader: flat" position="0 -1 -39.5" opacity="1" depth="40" height=".01" width="35"></a-box>
@@ -190,53 +171,70 @@
 
         <!--canvases-->
         <a-box id="1" position="-10 3 -19.69" material="shader: flat; src:{{theGallery.artList[0].url}}" opacity="1" depth=".04" height="{{theGallery.artList[0].height}}" width="{{theGallery.artList[0].width}}"></a-box>
-        <a-entity class="canvasLabel" rotation="0 -180 0" position="-10 3-{{theGallery.artList[0].height}}*0.5 -19.72" text="value: {{theGallery.artList[0].maker}}; height:2 width:3; align: center;"></a-entity>
+        <a-entity class="canvasLabel" rotation="0 -180 0" position="-10 {{theGallery.artList[0].makerHeight}} -19.72" text="value: {{theGallery.artList[0].maker}}; color:#ff0000; height:2; width:3; align: center;"></a-entity>
+        <a-entity class="canvasLabel" rotation="0 -180 0" position="-10 {{theGallery.artList[0].titleHeight}} -19.72" text="value: {{theGallery.artList[0].title}}; color:#ff0000; height:2; width:3; align: center;"></a-entity>
 
         <a-box id="2" position="-17.5 3 -27.5" material="shader: flat; src:{{theGallery.artList[1].url}}" opacity="1" depth="{{theGallery.artList[1].width}}" height="{{theGallery.artList[1].height}}" width="0.04"></a-box>
-        <a-entity class="canvasLabel" rotation="0 90 0" position="-17.45 3-{{theGallery.artList[1].height}}*0.5 -27.5" text="value: {{theGallery.artList[1].maker}}; height:2 width:3; align: center;"></a-entity>
+        <a-entity class="canvasLabel" rotation="0 90 0" position="-17.45 {{theGallery.artList[1].makerHeight}} -27.5" text="value: {{theGallery.artList[1].maker}}; color:#ff0000; height:2; width:3; align: center;"></a-entity>
+        <a-entity class="canvasLabel" rotation="0 90 0" position="-17.45 {{theGallery.artList[1].titleHeight}} -27.5" text="value: {{theGallery.artList[1].title}}; color:#ff0000; height:2; width:3; align: center;"></a-entity>
 
         <a-box id="3" position="-17.5 3 -38.75" material="shader: flat; src:{{theGallery.artList[2].url}}" opacity="1" depth="{{theGallery.artList[2].width}}" height="{{theGallery.artList[2].height}}" width="0.04"></a-box>
-        <a-entity class="canvasLabel" rotation="0 90 0" position="-17.45 3-{{theGallery.artList[2].height}}*0.5 -38.75" text="value: {{theGallery.artList[2].maker}}; height:2 width:3; align: center;"></a-entity>
+        <a-entity class="canvasLabel" rotation="0 90 0" position="-17.45 {{theGallery.artList[2].makerHeight}} -38.75" text="value: {{theGallery.artList[2].maker}}; color:#ff0000; height:2; width:3; align: center;"></a-entity>
+        <a-entity class="canvasLabel" rotation="0 90 0" position="-17.45 {{theGallery.artList[2].titleHeight}} -38.75" text="value: {{theGallery.artList[2].title}}; color:#ff0000; height:2; width:3; align: center;"></a-entity>
 
         <a-box id="4" position="-11.5 3 -46.8" material="shader: flat; src:{{theGallery.artList[3].url}}" opacity="1" depth=".04" height="{{theGallery.artList[3].height}}" width="{{theGallery.artList[3].width}}"></a-box>
-        <a-entity class="canvasLabel" rotation="0 0 0" position="-11.5 3-{{theGallery.artList[3].height}}*0.5 -46.75" text="value: {{theGallery.artList[3].maker}}; height:2 width:3; align: center;"></a-entity>
+        <a-entity class="canvasLabel" rotation="0 0 0" position="-11.5 {{theGallery.artList[3].makerHeight}} -46.75" text="value: {{theGallery.artList[3].maker}}; color:#ff0000; height:2; width:3; align: center;"></a-entity>
+        <a-entity class="canvasLabel" rotation="0 0 0" position="-11.5 {{theGallery.artList[3].titleHeight}} -46.75" text="value: {{theGallery.artList[3].title}}; color:#ff0000; height:2; width:3; align: center;"></a-entity>
 
         <a-box id="5" position="-11.5 3 -47.2" material="shader: flat; src:{{theGallery.artList[4].url}}" opacity="1" depth=".04" height="{{theGallery.artList[4].height}}" width="{{theGallery.artList[4].width}}"></a-box>
-        <a-entity class="canvasLabel" rotation="0 90 0" position="-11.5 3-{{theGallery.artList[4].height}}*0.5 -47.25" text="value: {{theGallery.artList[4].maker}}; height:2 width:3; align: center;"></a-entity>
+        <a-entity class="canvasLabel" rotation="0 180 0" position="-11.5 {{theGallery.artList[4].makerHeight}} -47.25" text="value: {{theGallery.artList[4].maker}}; color:#ff0000; height:2; width:3; align: center;"></a-entity>
+        <a-entity class="canvasLabel" rotation="0 180 0" position="-11.5 {{theGallery.artList[4].titleHeight}} -47.25" text="value: {{theGallery.artList[4].title}}; color:#ff0000; height:2; width:3; align: center;"></a-entity>
 
         <a-box id="6" position="-17.5 3 -53.2" material="shader: flat; src:{{theGallery.artList[5].url}}" opacity="1" depth="{{theGallery.artList[5].width}}" height="{{theGallery.artList[5].height}}" width="0.04"></a-box>
-        <a-entity class="canvasLabel" rotation="0 90 0" position="-17.45 3-{{theGallery.artList[5].height}}*0.5 -53.2" text="value: {{theGallery.artList[5].maker}}; height:2 width:3; align: center;"></a-entity>
+        <a-entity class="canvasLabel" rotation="0 90 0" position="-17.45 {{theGallery.artList[5].makerHeight}} -53.2" text="value: {{theGallery.artList[5].maker}}; color:#ff0000; height:2; width:3; align: center;"></a-entity>
+        <a-entity class="canvasLabel" rotation="0 90 0" position="-17.45 {{theGallery.artList[5].titleHeight}} -53.2" text="value: {{theGallery.artList[5].title}}; color:#ff0000; height:2; width:3; align: center;"></a-entity>
 
+        <!--Back Wall-->
         <a-box id="7" position="-10 3 -59.4" material="shader: flat; src:{{theGallery.artList[6].url}}" opacity="1" depth=".04" height="{{theGallery.artList[6].height}}" width="{{theGallery.artList[6].width}}"></a-box>
-        <a-entity class="canvasLabel" rotation="0 90 0" position="-10 3-{{theGallery.artList[6].height}}*0.5 -59.4" text="value: {{theGallery.artList[6].maker}}; height:2 width:3; align: center;"></a-entity>
+        <a-entity class="canvasLabel" rotation="0 0 0" position="-10 {{theGallery.artList[6].makerHeight}} -59.4" text="value: {{theGallery.artList[6].maker}}; color:#ff0000; height:2; width:3; align: center;"></a-entity>
+        <a-entity class="canvasLabel" rotation="0 0 0" position="-10 {{theGallery.artList[6].titleHeight}} -59.4" text="value: {{theGallery.artList[6].title}}; color:#ff0000; height:2; width:3; align: center;"></a-entity>
 
         <a-box id="8" position="0 3 -59.4" material="shader: flat; src:{{theGallery.artList[7].url}}" opacity="1" depth=".04" height="{{theGallery.artList[7].height}}" width="{{theGallery.artList[7].width}}"></a-box>
-        <a-entity class="canvasLabel" rotation="0 90 0" position="0 3-{{theGallery.artList[7].height}}*0.5 -59.4" text="value: {{theGallery.artList[7].maker}}; height:2 width:3; align: center;"></a-entity>
+        <a-entity class="canvasLabel" rotation="0 0 0" position="0 {{theGallery.artList[7].makerHeight}} -59.4" text="value: {{theGallery.artList[7].maker}}; color:#ff0000; height:2; width:3; align: center;"></a-entity>
+        <a-entity class="canvasLabel" rotation="0 0 0" position="0 {{theGallery.artList[7].titleHeight}} -59.4" text="value: {{theGallery.artList[7].title}}; color:#ff0000; height:2; width:3; align: center;"></a-entity>
 
         <a-box id="9" position="10 3 -59.4" material="shader: flat; src:{{theGallery.artList[8].url}}" opacity="1" depth=".04" height="{{theGallery.artList[8].height}}" width="{{theGallery.artList[8].width}}"></a-box>
-        <a-entity class="canvasLabel" rotation="0 90 0" position="10 3-{{theGallery.artList[8].height}}*0.5 -59.4" text="value: {{theGallery.artList[8].maker}}; height:2 width:3; align: center;"></a-entity>
-
+        <a-entity class="canvasLabel" rotation="0 0 0" position="10 {{theGallery.artList[8].makerHeight}} -59.4" text="value: {{theGallery.artList[8].maker}}; color:#ff0000; height:2; width:3; align: center;"></a-entity>
+        <a-entity class="canvasLabel" rotation="0 0 0" position="10 {{theGallery.artList[8].titleHeight}} -59.4" text="value: {{theGallery.artList[8].title}}; color:#ff0000; height:2; width:3; align: center;"></a-entity>
+        <!--Slash Back Wall-->
         <a-box id="10" position="17.5 3 -53.2" material="shader: flat; src:{{theGallery.artList[9].url}}" opacity="1" depth="{{theGallery.artList[9].width}}" height="{{theGallery.artList[9].height}}" width="0.04"></a-box>
-        <a-entity class="canvasLabel" rotation="0 90 0" position="17.5 3-{{theGallery.artList[9].height}}*0.5 -53.2" text="value: {{theGallery.artList[9].maker}}; height:2 width:3; align: center;"></a-entity>
+        <a-entity class="canvasLabel" rotation="0 -90 0" position="17.49 {{theGallery.artList[9].makerHeight}} -53.2" text="value: {{theGallery.artList[9].maker}}; color:#ff0000; height:2; width:3; align: center;"></a-entity>
+        <a-entity class="canvasLabel" rotation="0 -90 0" position="17.49 {{theGallery.artList[9].titleHeight}} -53.2" text="value: {{theGallery.artList[9].title}}; color:#ff0000; height:2; width:3; align: center;"></a-entity>
 
         <a-box id="11" position="11.5 3 -47.2" material="shader: flat; src:{{theGallery.artList[10].url}}" opacity="1" depth=".04" height="{{theGallery.artList[10].height}}" width="{{theGallery.artList[10].width}}"></a-box>
-        <a-entity class="canvasLabel" rotation="0 90 0" position="11.5 3-{{theGallery.artList[10].height}}*0.5 -47.25" text="value: {{theGallery.artList[10].maker}}; height:2 width:3; align: center;"></a-entity>
+        <a-entity class="canvasLabel" rotation="0 180 0" position="11.5 {{theGallery.artList[10].makerHeight}} -47.25" text="value: {{theGallery.artList[10].maker}}; color:#ff0000; height:2; width:3; align: center;"></a-entity>
+        <a-entity class="canvasLabel" rotation="0 180 0" position="11.5 {{theGallery.artList[10].titleHeight}} -47.25" text="value: {{theGallery.artList[10].title}}; color:#ff0000; height:2; width:3; align: center;"></a-entity>
+
 
         <a-box id="12" position="11.5 3 -46.8" material="shader: flat; src:{{theGallery.artList[11].url}}" opacity="1" depth=".04" height="{{theGallery.artList[11].height}}" width="{{theGallery.artList[11].width}}"></a-box>
-        <a-entity class="canvasLabel" rotation="0 0 0" position="11.5 3-{{theGallery.artList[11].height}}*0.5 -46.75" text="value: {{theGallery.artList[11].maker}}; height:2 width:3; align: center;"></a-entity>
+        <a-entity class="canvasLabel" rotation="0 0 0" position="11.5 {{theGallery.artList[11].makerHeight}} -46.75" text="value: {{theGallery.artList[11].maker}}; color:#ff0000; height:2; width:3; align: center;"></a-entity>
+        <a-entity class="canvasLabel" rotation="0 0 0" position="11.5 {{theGallery.artList[11].titleHeight}} -46.75" text="value: {{theGallery.artList[11].title}}; color:#ff0000; height:2; width:3; align: center;"></a-entity>
 
         <a-box id="13" position="17.5 3 -38.75" material="shader: flat; src:{{theGallery.artList[12].url}}" opacity="1" depth="{{theGallery.artList[12].width}}" height="{{theGallery.artList[12].height}}" width="0.04"></a-box>
-        <a-entity class="canvasLabel" rotation="0 90 0" position="17.5 3-{{theGallery.artList[12].height}}*0.5 -38.75" text="value: {{theGallery.artList[12].maker}}; height:2 width:3; align: center;"></a-entity>
+        <a-entity class="canvasLabel" rotation="0 -90 0" position="17.49 {{theGallery.artList[12].makerHeight}} -38.75" text="value: {{theGallery.artList[12].maker}}; color:#ff0000; height:2; width:3; align: center;"></a-entity>
+        <a-entity class="canvasLabel" rotation="0 -90 0" position="17.49 {{theGallery.artList[12].titleHeight}} -38.75" text="value: {{theGallery.artList[12].title}}; color:#ff0000; height:2; width:3; align: center;"></a-entity>
 
         <a-box id="14" position="17.5 3 -27.5" material="shader: flat; src:{{theGallery.artList[13].url}}" opacity="1" depth="{{theGallery.artList[13].width}}" height="{{theGallery.artList[13].height}}" width="0.04"></a-box>
-        <a-entity class="canvasLabel" rotation="0 90 0" position="17.5 3-{{theGallery.artList[13].height}}*0.5 -27.5" text="value: {{theGallery.artList[13].maker}}; height:2 width:3; align: center;"></a-entity>
+        <a-entity class="canvasLabel" rotation="0 -90 0" position="17.49 {{theGallery.artList[13].makerHeight}} -27.5" text="value: {{theGallery.artList[13].maker}}; color:#ff0000; height:2; width:3; align: center;"></a-entity>
+        <a-entity class="canvasLabel" rotation="0 -90 0" position="17.49 {{theGallery.artList[13].titleHeight}} -27.5" text="value: {{theGallery.artList[13].title}}; color:#ff0000; height:2; width:3; align: center;"></a-entity>
 
         <a-box id="15" position="10 3 -19.69" material="shader: flat; src:{{theGallery.artList[14].url}}" opacity="1" depth=".04" height="{{theGallery.artList[14].height}}" width="{{theGallery.artList[14].width}}"></a-box>
-        <a-entity class="canvasLabel" rotation="0 -180 0" position="10 3-{{theGallery.artList[14].height}}*0.5 -19.72" text="value: {{theGallery.artList[14].maker}}; height:2 width:3; align: center;"></a-entity>
+        <a-entity class="canvasLabel" rotation="0 -180 0" position="10 {{theGallery.artList[14].makerHeight}} -19.72" text="value: {{theGallery.artList[14].maker}}; color:#ff0000; height:2; width:3; align: center;"></a-entity>
+        <a-entity class="canvasLabel" rotation="0 -180 0" position="10 {{theGallery.artList[14].titleHeight}} -19.72" text="value: {{theGallery.artList[14].title}}; color:#ff0000; height:2; width:3; align: center;"></a-entity>
 
         <a-box id="16" position="0 3 -33.22" material="shader: flat; src:{{theGallery.artList[15].url}}" opacity="1" depth=".04" height="{{theGallery.artList[15].height}}" width="{{theGallery.artList[15].width}}"></a-box>
-        <a-entity class="canvasLabel" rotation="0 -180 0" position="0 3-{{theGallery.artList[15].height}}*0.5 -33.22" text="value: {{theGallery.artList[15].maker}}; height:2 width:3; align: center;"></a-entity>
-
+        <a-entity class="canvasLabel" rotation="0 -180 0" position="0 {{theGallery.artList[15].makerHeight}} -33.34" text="value: {{theGallery.artList[15].maker}}; color:#ff0000; height:2; width:3; align: center;"></a-entity>
+        <a-entity class="canvasLabel" rotation="0 -180 0" position="0 {{theGallery.artList[15].titleHeight}} -33.34" text="value: {{theGallery.artList[15].title}}; color:#ff0000; height:2; width:3; align: center;"></a-entity>
         <!--tie fighter for reasons-->
         <a-entity collada-model="#tree" position="0 8.9 -21" rotation="25 180 0"></a-entity>
 

@@ -14,6 +14,7 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
                 height:'3',
                 width:'2',
                 maker:'Stan',
+                makerHeight:'3',
                 text:'Eric Cartman wuz here'
             },
             {
@@ -21,6 +22,7 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
                 height:'3',
                 width:'2',
                 maker:'Stan',
+                makerHeight:'3',
                 text:'Eric Cartman wuz here'
             },
             {
@@ -28,6 +30,7 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
                 height:'3',
                 width:'2',
                 maker:'Stan',
+                makerHeight:'3',
                 text:'Eric Cartman wuz here'
             },
             {
@@ -35,6 +38,7 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
                 height:'3',
                 width:'2',
                 maker:'Stan',
+                makerHeight:'3',
                 text:'Eric Cartman wuz here'
             },
             {
@@ -42,6 +46,7 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
                 height:'3',
                 width:'2',
                 maker:'Stan',
+                makerHeight:'3',
                 text:'Eric Cartman wuz here'
             },
             {
@@ -49,6 +54,7 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
                 height:'3',
                 width:'2',
                 maker:'Stan',
+                makerHeight:'3',
                 text:'Eric Cartman wuz here'
             },
             {
@@ -56,6 +62,7 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
                 height:'3',
                 width:'2',
                 maker:'Stan',
+                makerHeight:'3',
                 text:'Eric Cartman wuz here'
             },
             {
@@ -63,6 +70,7 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
                 height:'3',
                 width:'2',
                 maker:'Stan',
+                makerHeight:'3',
                 text:'Eric Cartman wuz here'
             },
             {
@@ -70,6 +78,7 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
                 height:'3',
                 width:'2',
                 maker:'Stan',
+                makerHeight:'3',
                 text:'Eric Cartman wuz here'
             },
             {
@@ -77,6 +86,7 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
                 height:'3',
                 width:'2',
                 maker:'Stan',
+                makerHeight:'3',
                 text:'Eric Cartman wuz here'
             },
             {
@@ -84,6 +94,7 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
                 height:'3',
                 width:'2',
                 maker:'Stan',
+                makerHeight:'3',
                 text:'Eric Cartman wuz here'
             },
             {
@@ -91,6 +102,7 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
                 height:'3',
                 width:'2',
                 maker:'Stan',
+                makerHeight:'3',
                 text:'Eric Cartman wuz here'
             },
             {
@@ -98,6 +110,7 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
                 height:'3',
                 width:'2',
                 maker:'Stan',
+                makerHeight:'3',
                 text:'Eric Cartman wuz here'
             },
             {
@@ -105,6 +118,7 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
                 height:'3',
                 width:'2',
                 maker:'Stan',
+                makerHeight:'3',
                 text:'Eric Cartman wuz here'
             },
             {
@@ -112,6 +126,7 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
                 height:'3',
                 width:'2',
                 maker:'Stan',
+                makerHeight:'3',
                 text:'Eric Cartman wuz here'
             },
             {
@@ -119,6 +134,7 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
                 height:'3',
                 width:'2',
                 maker:'Stan',
+                makerHeight:'3',
                 text:'Eric Cartman wuz here'
             }
         ]
@@ -138,8 +154,14 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
         "gothic":"styles/gothic"
     }
 
+    var lastClick = 0;
 
     $scope.getGallery = function(galleryName, page = 1){
+        if (lastClick >= (Date.now() - 8000)){
+            return;
+        }
+        lastClick = Date.now();
+        console.log($scope.theGallery);
         if(galleryName === 'undefined'){
             galleryName = 'vermeer';
         }
@@ -158,22 +180,30 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
             newGallery.artList = jsonData.data.contentPage.artObjectSet;
             newGallery.text = jsonData.data.contentPage.body.markdown;
             newGallery.splash = jsonData.data.contentPage.headerImage;
-            var temp;
-            for(var i = 0; i< newGallery.artList.length; i++){
+            var result = [];
+            var num = newGallery.artList.length;
+            for(var i=0; i < num; i++){
+                var q = Math.floor(Math.random()*newGallery.artList.length);
+                result.push(newGallery.artList.splice(q, 1));
+            };
+            newGallery.artList = result;
+            var buffer = 0;
+            var done = 0;
+            for(var i = 0; i< newGallery.artList.length && done < 17; i++){
 
                 !function outer(i){
                     canvasFactory(newGallery.artList[i],function(newCanvas){
-                        if(!newCanvas.url){
-                            newGallery.artList[i] = "()()()()()()()()()()()()()()";
-                        }else{
-                            newGallery.artList[i] = newCanvas;
+                        while(newCanvas == null && i+buffer < newGallery.artList.length){
+                            newCanvas = canvasFactory(newGallery.artist[17 + buffer])
+                            buffer++;
                         }
+                        newGallery.artList[i] = newCanvas;
+                        done++;
                         // console.log("Image " + (i+1) + ": "+ JSON.stringify(newGallery.artList[i]));
                     });
                 }(i)
-
-
             }
+  
             // console.log("TEH BROWSER SEEED THE DATAS AZZZZ ***************************************" + JSON.stringify(newGallery))
             console.log(JSON.stringify(newGallery, undefined, 2));
             $scope.theGallery = newGallery;
@@ -184,7 +214,5 @@ rijMuse.controller('galleryController', ['$http', '$routeParams', 'canvasFactory
             alert("Sorry, this wing is closed. Try a different gallery!")
         });
     }
-    // console.log(getGallery('paper'));
-
 }])
 
