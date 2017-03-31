@@ -41,3 +41,21 @@ Gothic:
 https://www.rijksmuseum.nl/en/rijksstudio/styles/gothic
 <a-entity id="galleryText" value="Hey look. an easter egg. I guess that makes this spring themed!! " text="anchor:left;baseline:top;height:8.84;opacity:1;value:Rembrandt Harmensz van Rijn (1606-1669) was born in Leiden, the son of a miller. After finishing Latin School, his parents enrolled him at Leiden University. Rembrandt soon dropped out and became an apprentice painter under Jacob van Swanenburch in Leiden, and later Pieter Lastman in Amsterdam. Back in Leiden, he set up as an independent artist together with Jan Lievens. At this time, Rembrandt mainly painted biblical scenes in a precise style and with vibrant colours.  In 1631, he moved to Amsterdam where he received numerous commissions for portraits. His many pupils included Ferdinand Bol, Govert Flinck and Carel Fabritius. In this period, Rembrandt develop a more powerful chiaroscuro, a looser brush and a greater sense of drama. He focused more on historical scenes, and made numerous etchings and drawings.  In 1634, Rembrandt married Saskia Uylenburgh. They had a son, Titus, in 1641. Then a year later Saskia died. Later, in 1654, Rembrandt had a daughter with Hendrickje Stoffels. By now, he had accumulated huge debts and was forced to sell his house and property. He died in 1669 and was buried in Amsterdam's Westerkerk.;width:10.559999999999999;wrapCount:69.48;zOffset:0" position=""></a-entity>
 text="anchor: left; baseline: top; height: 8.84; opacity: 1; value: sjdkfj; width: 10.559999999999999; wrapCount: 69.48; zOffset: 0" position="-5.59 7.30 -32.82"
+
+text="align: center; height: 2; opacity: 1; value: Rembrandt van Rijn (1606-1669), oil on canvas, 1634; width: 2.98"
+
+
+
+    <a-entity text="align:center;color:#ffffff;height:2.94;opacity:1;value:Masterpiece Collection;width:1.56;zOffset:0" position="2.23 2.64 -19.02"></a-entity>
+    <a-entity text="align:center;color:#ffffff;height:2.94;opacity:1;value:Gothic (1150 - 1500);width:1.98;zOffset:0" position="2.23 2.64 -19.02"></a-entity>
+    <a-entity text="align:center;color:#ffffff;height:2.94;opacity:1;value:Renaissance (1400 - 1600);width:1.98;zOffset:0" position="2.23 2.64 -19.02"></a-entity>
+    <a-entity text="align:center;color:#ffffff;height:2.94;opacity:1;value:Mannerism (~1520);width:1.98;zOffset:0" position="2.23 2.64 -19.02"></a-entity>
+    <a-entity text="align:center;color:#ffffff;height:2.94;opacity:1;value:Baroque (1600 - 1750);width:1.98;zOffset:0" position="2.23 2.64 -19.02"></a-entity>
+    <a-entity text="align:center;color:#ffffff;height:2.94;opacity:1;value:Rococo (1723 - 1774);width:1.98;zOffset:0" position="2.23 2.64 -19.02"></a-entity>
+    <a-entity text="align:center;color:#ffffff;height:2.94;opacity:1;value:Classicism (1650 - 1720);width:1.98;zOffset:0" position="2.23 2.64 -19.02"></a-entity>
+    <a-entity text="align:center;color:#ffffff;height:2.94;opacity:1;value:Italianates (1623 - );width:1.98;zOffset:0" position="2.23 2.64 -19.02"></a-entity>
+       
+
+       text="align: center; color: #ff0000; height: 2; opacity: 1; value: Japan, 14th century, wood with traces of painting; width: 3; zOffset: 0"
+
+       "SK-A-5002"

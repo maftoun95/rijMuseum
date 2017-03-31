@@ -17,6 +17,7 @@ rijMuse.factory('canvasFactory', [
                 // when the response is available
                 // console.log("Canvas JSON Data: " + JSON.stringify(jsonData))
                 newCanvas.id = jsonData.data.artObject.id;
+                newCanvas.maker = "No data provided."
                 // Dimension data should be in cm. If you have trouble rendering, check dimensions[i].unit.
                 if(jsonData.data.artObject.webImage != null){
                     newCanvas.height = jsonData.data.artObject.webImage.height/600;
@@ -27,9 +28,15 @@ rijMuse.factory('canvasFactory', [
                 }
                 
                 newCanvas.url = jsonData.data.artObject.webImage.url;
+                if(newCanvas.url == null){
+                    return null;
+                }
                 newCanvas.title = jsonData.data.artObject.label.title;
-                newCanvas.maker = jsonData.data.artObject.label.makerLine;
-                newCanvas.makerHeight = 2.75 - newCanvas.height/2
+                if (jsonData.data.artObject.label.makerLine != null){
+                    newCanvas.maker = jsonData.data.artObject.label.makerLine;
+                }
+                newCanvas.makerHeight = 2.75 - newCanvas.height/2;
+                newCanvas.titleHeight = 3.25 + newCanvas.height/2;
                 //Sets the description field, checking several spots for the appropriate data.
                 if (jsonData.data.artObject.plaqueDescriptionEnglish){
                     newCanvas.text = jsonData.data.artObject.plaqueDescriptionEnglish
