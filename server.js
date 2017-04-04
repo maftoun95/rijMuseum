@@ -3,7 +3,8 @@ var express = require('express'),
     bp = require('body-parser'),
     path = require('path'),
     session = require('express-session')
-    PORT = process.env.PORT || 8000;
+    // PORT = process.env.PORT || 8000;
+    PORT = 8000;
 
 app.use(express.static(path.join(__dirname,'/client')))
 app.use(express.static(path.join(__dirname,'/server')))
